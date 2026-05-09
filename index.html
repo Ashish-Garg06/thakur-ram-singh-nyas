@@ -6,790 +6,14 @@
 <title>Thakur Ram Singh Smriti Nyas | सेवा परमो धर्मः</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet">
-<style>
-/* ============================================================
-   DESIGN SYSTEM — Saffron & Deep Forest | Heritage Editorial
-   ============================================================ */
-:root {
-  --saffron:      #D4580A;
-  --saffron-lt:   #F0842A;
-  --saffron-pale: #FDF3E8;
-  --gold:         #C5973A;
-  --gold-lt:      #E8C97A;
-  --forest:       #1A3A2E;
-  --forest-mid:   #24503F;
-  --forest-lt:    #2F6B54;
-  --cream:        #FAF7F1;
-  --cream-dk:     #F0EAE0;
-  --ink:          #1C1208;
-  --ink-mid:      #3D2E1A;
-  --ink-lt:       #6B5740;
-  --white:        #FFFDF9;
-  --border:       rgba(197,151,58,0.25);
-  --border-dk:    rgba(197,151,58,0.5);
-  --shadow:       0 4px 40px rgba(28,18,8,0.12);
-  --shadow-lg:    0 12px 80px rgba(28,18,8,0.2);
-
-  --ff-display: 'Cormorant Garamond', serif;
-  --ff-body:    'Crimson Pro', serif;
-  --ff-devan:   'Tiro Devanagari Sanskrit', serif;
-}
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-html { scroll-behavior: smooth; font-size: 16px; }
-
-body {
-  font-family: var(--ff-body);
-  background: var(--cream);
-  color: var(--ink);
-  overflow-x: hidden;
-  line-height: 1.7;
-}
-
-/* ========== SCROLLBAR ========== */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--cream-dk); }
-::-webkit-scrollbar-thumb { background: var(--saffron); border-radius: 3px; }
-
-/* ========== NOISE TEXTURE OVERLAY ========== */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0.4;
-}
-
-/* ========== UTILITY ========== */
-.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-.section-label {
-  font-family: var(--ff-body);
-  font-size: 0.72rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--saffron);
-  display: block;
-  margin-bottom: 0.75rem;
-}
-.divider {
-  width: 60px; height: 2px;
-  background: linear-gradient(90deg, var(--saffron), var(--gold));
-  margin: 1.5rem 0;
-}
-.divider.center { margin: 1.5rem auto; }
-
-/* ========== NAV ========== */
-#navbar {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-  padding: 0 2rem;
-  transition: all 0.4s ease;
-}
-#navbar.scrolled {
-  background: rgba(250,247,241,0.97);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 2px 20px rgba(28,18,8,0.08);
-}
-.nav-inner {
-  max-width: 1200px; margin: 0 auto;
-  display: flex; align-items: center; justify-content: space-between;
-  height: 72px;
-}
-.nav-logo {
-  display: flex; align-items: center; gap: 0.75rem;
-  text-decoration: none;
-}
-.nav-logo-emblem {
-  width: 44px; height: 44px;
-  background: linear-gradient(135deg, var(--saffron), var(--gold));
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.4rem; color: var(--white);
-  box-shadow: 0 2px 12px rgba(212,88,10,0.35);
-  flex-shrink: 0;
-}
-.nav-logo-text { line-height: 1.2; }
-.nav-logo-text span:first-child {
-  display: block; font-family: var(--ff-display); font-size: 1.05rem;
-  font-weight: 700; color: var(--forest); letter-spacing: 0.01em;
-}
-.nav-logo-text span:last-child {
-  display: block; font-size: 0.65rem; letter-spacing: 0.18em;
-  text-transform: uppercase; color: var(--saffron); font-weight: 500;
-}
-.nav-links {
-  display: flex; gap: 2rem; list-style: none;
-}
-.nav-links a {
-  font-family: var(--ff-body); font-size: 0.9rem;
-  letter-spacing: 0.06em; text-decoration: none;
-  color: var(--ink-mid); font-weight: 400;
-  transition: color 0.2s;
-  position: relative;
-}
-.nav-links a::after {
-  content: ''; position: absolute; bottom: -3px; left: 0; right: 0;
-  height: 1px; background: var(--saffron);
-  transform: scaleX(0); transition: transform 0.25s;
-}
-.nav-links a:hover { color: var(--saffron); }
-.nav-links a:hover::after { transform: scaleX(1); }
-.nav-cta {
-  background: var(--saffron); color: var(--white) !important;
-  padding: 0.5rem 1.2rem; border-radius: 3px;
-  font-weight: 500 !important; transition: background 0.2s !important;
-}
-.nav-cta:hover { background: var(--forest) !important; }
-.nav-cta::after { display: none !important; }
-.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
-.hamburger span { display: block; width: 24px; height: 2px; background: var(--ink); transition: all 0.3s; }
-
-/* ========== HERO ========== */
-#hero {
-  min-height: 100vh;
-  background: var(--forest);
-  position: relative; overflow: hidden;
-  display: flex; align-items: center;
-}
-.hero-bg-pattern {
-  position: absolute; inset: 0;
-  background-image:
-    radial-gradient(ellipse 80% 60% at 60% 50%, rgba(197,151,58,0.08) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 40% at 20% 80%, rgba(212,88,10,0.1) 0%, transparent 60%);
-}
-.hero-mandala {
-  position: absolute; right: -80px; top: 50%;
-  transform: translateY(-50%);
-  width: 650px; height: 650px; opacity: 0.06;
-}
-.hero-mandala svg { width: 100%; height: 100%; animation: spin 120s linear infinite; }
-@keyframes spin { to { transform: rotate(360deg); } }
-
-.hero-content {
-  position: relative; z-index: 2;
-  max-width: 1200px; margin: 0 auto; padding: 6rem 2rem 4rem;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
-}
-.hero-left {}
-.hero-tag {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  background: rgba(197,151,58,0.15); border: 1px solid rgba(197,151,58,0.3);
-  padding: 0.35rem 1rem; border-radius: 30px;
-  font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--gold-lt); margin-bottom: 1.5rem;
-}
-.hero-tag::before { content: '✦'; font-size: 0.6rem; }
-.hero-title {
-  font-family: var(--ff-display); color: var(--white);
-  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-  line-height: 1.1; font-weight: 300;
-  margin-bottom: 0.5rem;
-}
-.hero-title strong { font-weight: 700; color: var(--gold-lt); }
-.hero-subtitle-devan {
-  font-family: var(--ff-devan); color: var(--gold);
-  font-size: 1.1rem; margin-bottom: 1.5rem; line-height: 1.6;
-  opacity: 0.9;
-}
-.hero-desc {
-  color: rgba(250,247,241,0.7); font-size: 1.05rem;
-  line-height: 1.8; margin-bottom: 2.5rem; max-width: 480px;
-}
-.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
-.btn-primary {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  background: var(--saffron); color: var(--white);
-  padding: 0.85rem 2rem; border-radius: 3px;
-  font-family: var(--ff-body); font-size: 0.9rem;
-  letter-spacing: 0.08em; text-decoration: none;
-  font-weight: 600; transition: all 0.25s;
-  box-shadow: 0 4px 20px rgba(212,88,10,0.4);
-}
-.btn-primary:hover { background: var(--saffron-lt); transform: translateY(-2px); }
-.btn-outline {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  border: 1px solid rgba(197,151,58,0.5); color: var(--gold-lt);
-  padding: 0.85rem 2rem; border-radius: 3px;
-  font-family: var(--ff-body); font-size: 0.9rem;
-  letter-spacing: 0.08em; text-decoration: none;
-  transition: all 0.25s;
-}
-.btn-outline:hover { background: rgba(197,151,58,0.1); border-color: var(--gold); }
-
-.hero-right {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
-}
-.hero-stat-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(197,151,58,0.15);
-  padding: 1.5rem; border-radius: 4px;
-  backdrop-filter: blur(4px);
-  transition: border-color 0.3s;
-}
-.hero-stat-card:hover { border-color: rgba(197,151,58,0.4); }
-.hero-stat-card:nth-child(1) { grid-column: span 2; display: flex; align-items: center; gap: 1rem; }
-.hero-stat-num {
-  font-family: var(--ff-display); font-size: 2.8rem;
-  font-weight: 700; color: var(--gold-lt); line-height: 1;
-}
-.hero-stat-label { font-size: 0.82rem; color: rgba(250,247,241,0.6); letter-spacing: 0.05em; margin-top: 0.25rem; }
-.hero-stat-icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
-.hero-stat-text { font-size: 0.9rem; color: rgba(250,247,241,0.75); line-height: 1.5; }
-
-.hero-scroll {
-  position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
-  display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
-  color: rgba(250,247,241,0.4); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
-  animation: bounce 2s ease-in-out infinite;
-  cursor: pointer; text-decoration: none;
-}
-.hero-scroll::after { content: '↓'; font-size: 1rem; color: var(--gold); }
-@keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
-
-/* ========== MARQUEE STRIP ========== */
-.marquee-strip {
-  background: var(--saffron);
-  padding: 0.6rem 0; overflow: hidden;
-}
-.marquee-track {
-  display: flex; gap: 3rem; animation: marquee 30s linear infinite; width: max-content;
-}
-.marquee-item {
-  display: flex; align-items: center; gap: 1rem; white-space: nowrap;
-  font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase;
-  color: rgba(255,255,255,0.9); font-family: var(--ff-body);
-}
-.marquee-item::before { content: '✦'; font-size: 0.6rem; opacity: 0.7; }
-@keyframes marquee { to { transform: translateX(-50%); } }
-
-/* ========== VISION / ABOUT INTRO ========== */
-#about-intro {
-  padding: 6rem 0;
-  background: var(--white);
-}
-.about-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
-}
-.about-visual {
-  position: relative;
-}
-.about-img-frame {
-  aspect-ratio: 4/5; border-radius: 4px;
-  background: linear-gradient(135deg, var(--forest) 0%, var(--forest-mid) 50%, var(--saffron) 100%);
-  position: relative; overflow: hidden;
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: var(--shadow-lg);
-}
-.about-img-inner {
-  text-align: center; padding: 3rem;
-  color: rgba(250,247,241,0.85);
-}
-.about-img-inner .big-om {
-  font-size: 6rem; line-height: 1; margin-bottom: 1rem;
-  color: var(--gold-lt); text-shadow: 0 0 40px rgba(197,151,58,0.5);
-}
-.about-img-inner p {
-  font-family: var(--ff-devan); font-size: 1.1rem; line-height: 1.8;
-  color: rgba(250,247,241,0.8);
-}
-.about-badge {
-  position: absolute; bottom: -1.5rem; right: -1.5rem;
-  background: var(--saffron); color: var(--white);
-  width: 100px; height: 100px; border-radius: 50%;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  font-family: var(--ff-display); box-shadow: 0 4px 20px rgba(212,88,10,0.4);
-}
-.about-badge span:first-child { font-size: 1.6rem; font-weight: 700; line-height: 1; }
-.about-badge span:last-child { font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; }
-
-.about-content {}
-.about-content h2 {
-  font-family: var(--ff-display); font-size: clamp(2rem, 3vw, 2.8rem);
-  font-weight: 300; line-height: 1.2; color: var(--forest);
-  margin-bottom: 1rem;
-}
-.about-content h2 em { font-style: italic; color: var(--saffron); }
-.about-content p {
-  font-size: 1.05rem; color: var(--ink-mid); margin-bottom: 1rem; line-height: 1.9;
-}
-.about-shloka {
-  background: var(--cream); border-left: 3px solid var(--gold);
-  padding: 1.25rem 1.5rem; border-radius: 0 4px 4px 0;
-  margin: 1.5rem 0;
-}
-.about-shloka p {
-  font-family: var(--ff-devan); font-size: 1rem;
-  color: var(--forest); margin: 0; line-height: 1.9;
-}
-.about-pillars {
-  display: flex; gap: 2rem; margin-top: 2rem;
-}
-.pillar {
-  text-align: center;
-}
-.pillar-icon { font-size: 1.5rem; margin-bottom: 0.4rem; }
-.pillar-word {
-  font-family: var(--ff-display); font-size: 1rem;
-  font-weight: 700; color: var(--forest); display: block;
-}
-.pillar-word-devan {
-  font-family: var(--ff-devan); font-size: 0.82rem;
-  color: var(--saffron); display: block;
-}
-
-/* ========== ACTIVITIES ========== */
-#activities {
-  padding: 6rem 0;
-  background: var(--cream);
-}
-.section-header { text-align: center; margin-bottom: 4rem; }
-.section-header h2 {
-  font-family: var(--ff-display); font-size: clamp(2rem, 3.5vw, 3rem);
-  font-weight: 300; color: var(--forest);
-}
-.section-header h2 strong { font-weight: 700; }
-
-.activities-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
-}
-.activity-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 4px; padding: 2rem 1.5rem;
-  transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
-  position: relative; overflow: hidden; cursor: default;
-}
-.activity-card::before {
-  content: ''; position: absolute; bottom: 0; left: 0; right: 0;
-  height: 3px; background: linear-gradient(90deg, var(--saffron), var(--gold));
-  transform: scaleX(0); transition: transform 0.35s;
-}
-.activity-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: transparent; }
-.activity-card:hover::before { transform: scaleX(1); }
-.activity-card:nth-child(1) { grid-column: span 2; grid-row: span 1; }
-.activity-card:nth-child(6) { grid-column: span 2; }
-
-.card-icon { font-size: 2rem; margin-bottom: 1rem; }
-.card-num {
-  position: absolute; top: 1.25rem; right: 1.25rem;
-  font-family: var(--ff-display); font-size: 2.5rem;
-  font-weight: 700; color: var(--saffron); opacity: 0.08; line-height: 1;
-}
-.card-title {
-  font-family: var(--ff-display); font-size: 1.2rem;
-  font-weight: 700; color: var(--forest); margin-bottom: 0.75rem;
-}
-.card-desc { font-size: 0.92rem; color: var(--ink-lt); line-height: 1.7; margin-bottom: 1rem; }
-.card-shloka {
-  font-family: var(--ff-devan); font-size: 0.78rem;
-  color: var(--saffron); line-height: 1.7; border-top: 1px solid var(--border);
-  padding-top: 0.75rem; margin-top: auto;
-}
-
-/* ========== THAKUR RAM SINGH ========== */
-#founder {
-  padding: 6rem 0;
-  background: var(--forest);
-  position: relative; overflow: hidden;
-}
-#founder::before {
-  content: ''; position: absolute; inset: 0;
-  background: radial-gradient(ellipse at 80% 50%, rgba(197,151,58,0.08) 0%, transparent 60%);
-}
-.founder-grid {
-  display: grid; grid-template-columns: 5fr 7fr; gap: 5rem; align-items: center; position: relative; z-index: 1;
-}
-.founder-portrait {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(197,151,58,0.2);
-  border-radius: 4px; padding: 2.5rem;
-  text-align: center;
-}
-.founder-portrait .portrait-circle {
-  width: 160px; height: 160px; margin: 0 auto 1.5rem;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--saffron), var(--gold));
-  display: flex; align-items: center; justify-content: center;
-  font-size: 4rem; color: var(--white);
-  box-shadow: 0 0 60px rgba(197,151,58,0.25);
-}
-.founder-portrait h3 {
-  font-family: var(--ff-display); font-size: 1.6rem;
-  color: var(--white); font-weight: 300; margin-bottom: 0.25rem;
-}
-.founder-portrait .years {
-  font-size: 0.8rem; color: var(--gold); letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
-.founder-portrait a.wiki-link {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  margin-top: 1.5rem; padding: 0.6rem 1.5rem;
-  border: 1px solid rgba(197,151,58,0.3); border-radius: 3px;
-  color: var(--gold-lt); font-size: 0.82rem; text-decoration: none;
-  letter-spacing: 0.08em; transition: all 0.25s;
-}
-.founder-portrait a.wiki-link:hover { background: rgba(197,151,58,0.1); }
-
-.founder-content h2 {
-  font-family: var(--ff-display); font-size: clamp(2rem, 3vw, 2.8rem);
-  font-weight: 300; color: var(--white); line-height: 1.2; margin-bottom: 1rem;
-}
-.founder-content h2 em { font-style: italic; color: var(--gold-lt); }
-.founder-content p {
-  color: rgba(250,247,241,0.7); font-size: 1.05rem; line-height: 1.9; margin-bottom: 1rem;
-}
-.founder-quote {
-  border-left: 3px solid var(--gold); padding-left: 1.5rem; margin: 2rem 0;
-}
-.founder-quote p {
-  font-family: var(--ff-display); font-size: 1.3rem;
-  font-style: italic; color: var(--gold-lt) !important;
-  font-weight: 300; line-height: 1.5;
-}
-.founder-values {
-  display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem;
-}
-.value-tag {
-  background: rgba(197,151,58,0.1); border: 1px solid rgba(197,151,58,0.25);
-  padding: 0.35rem 0.9rem; border-radius: 20px;
-  font-size: 0.78rem; color: var(--gold-lt); letter-spacing: 0.06em;
-}
-
-/* ========== TEAM ========== */
-#team {
-  padding: 6rem 0;
-  background: var(--white);
-}
-.team-container { text-align: center; }
-.office-bearers {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
-  margin-bottom: 4rem;
-}
-.flip-card {
-  height: 280px; cursor: pointer; perspective: 1000px;
-}
-.flip-inner {
-  width: 100%; height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.65s cubic-bezier(0.4,0,0.2,1);
-  position: relative;
-}
-.flip-card:hover .flip-inner,
-.flip-card.flipped .flip-inner { transform: rotateY(180deg); }
-.flip-front, .flip-back {
-  position: absolute; inset: 0;
-  backface-visibility: hidden; border-radius: 4px;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  padding: 1.5rem;
-}
-.flip-front {
-  background: var(--cream);
-  border: 1px solid var(--border);
-}
-.flip-back {
-  background: var(--forest);
-  transform: rotateY(180deg);
-  border: 1px solid rgba(197,151,58,0.2);
-}
-.member-avatar {
-  width: 72px; height: 72px; border-radius: 50%;
-  background: linear-gradient(135deg, var(--saffron), var(--gold));
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.8rem; color: var(--white); margin-bottom: 1rem;
-  box-shadow: 0 4px 16px rgba(212,88,10,0.3);
-}
-.member-role {
-  font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--saffron); margin-bottom: 0.25rem;
-}
-.member-name {
-  font-family: var(--ff-display); font-size: 1.1rem;
-  font-weight: 700; color: var(--forest); line-height: 1.2;
-}
-.flip-hint {
-  font-size: 0.68rem; color: var(--ink-lt); margin-top: 0.5rem;
-  letter-spacing: 0.08em;
-}
-.member-message {
-  font-size: 0.88rem; color: rgba(250,247,241,0.8);
-  line-height: 1.7; text-align: center; font-style: italic;
-  font-family: var(--ff-body);
-}
-.member-name-back {
-  font-family: var(--ff-display); font-size: 1rem;
-  color: var(--gold-lt); margin-top: 1rem; font-weight: 600;
-}
-
-.trust-board {
-  background: var(--cream); border: 1px solid var(--border);
-  border-radius: 4px; padding: 2.5rem;
-}
-.trust-board h3 {
-  font-family: var(--ff-display); font-size: 1.6rem;
-  font-weight: 300; color: var(--forest); margin-bottom: 2rem;
-}
-.board-members {
-  display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;
-}
-.board-member {
-  display: flex; align-items: center; gap: 0.75rem;
-  background: var(--white); border: 1px solid var(--border);
-  padding: 0.75rem 1.25rem; border-radius: 3px;
-}
-.board-member-dot {
-  width: 32px; height: 32px; border-radius: 50%;
-  background: linear-gradient(135deg, var(--forest), var(--forest-lt));
-  display: flex; align-items: center; justify-content: center;
-  font-size: 0.7rem; color: var(--gold-lt); flex-shrink: 0;
-}
-.board-member-name {
-  font-family: var(--ff-display); font-size: 0.95rem;
-  font-weight: 600; color: var(--forest);
-}
-
-/* ========== VISION PILLARS ========== */
-#vision {
-  padding: 6rem 0;
-  background: linear-gradient(135deg, var(--forest) 0%, #0D2218 100%);
-  position: relative; overflow: hidden;
-}
-#vision::before {
-  content: ''; position: absolute; inset: 0;
-  background-image: radial-gradient(circle at 30% 70%, rgba(212,88,10,0.08) 0%, transparent 50%),
-                    radial-gradient(circle at 80% 20%, rgba(197,151,58,0.06) 0%, transparent 50%);
-}
-.vision-header { text-align: center; margin-bottom: 4rem; position: relative; z-index: 1; }
-.vision-header h2 {
-  font-family: var(--ff-display); font-size: clamp(2rem, 3.5vw, 3rem);
-  font-weight: 300; color: var(--white);
-}
-.vision-header .big-shloka {
-  font-family: var(--ff-devan); font-size: 1.05rem;
-  color: var(--gold); margin-top: 1rem; line-height: 2;
-  opacity: 0.9;
-}
-
-.vision-items {
-  position: relative; z-index: 1;
-  display: flex; flex-direction: column; gap: 0;
-}
-.vision-item {
-  display: grid; grid-template-columns: 80px 1fr; gap: 0;
-  border-top: 1px solid rgba(197,151,58,0.12);
-  padding: 2rem 0;
-  transition: background 0.3s;
-  cursor: default;
-}
-.vision-item:last-child { border-bottom: 1px solid rgba(197,151,58,0.12); }
-.vision-item:hover { background: rgba(197,151,58,0.04); }
-.vision-item-num {
-  font-family: var(--ff-display); font-size: 3rem;
-  font-weight: 700; color: rgba(197,151,58,0.2); line-height: 1;
-  padding-top: 0.25rem;
-}
-.vision-item-body { padding-right: 2rem; }
-.vision-item-title {
-  font-family: var(--ff-display); font-size: 1.3rem;
-  font-weight: 700; color: var(--white); margin-bottom: 0.5rem;
-}
-.vision-item-desc { font-size: 0.95rem; color: rgba(250,247,241,0.6); line-height: 1.8; }
-
-/* ========== MEDIA / PRESS ========== */
-#media {
-  padding: 6rem 0;
-  background: var(--cream);
-}
-.media-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
-}
-.media-card {
-  background: var(--white); border: 1px solid var(--border);
-  border-radius: 4px; padding: 2.5rem;
-  transition: all 0.3s; cursor: pointer;
-}
-.media-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-.media-card-type {
-  font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--saffron); margin-bottom: 1rem;
-  display: flex; align-items: center; gap: 0.5rem;
-}
-.media-card-type::before { content: ''; display: block; width: 20px; height: 1px; background: var(--saffron); }
-.media-card h3 {
-  font-family: var(--ff-display); font-size: 1.5rem;
-  font-weight: 600; color: var(--forest); margin-bottom: 0.75rem;
-}
-.media-card p { font-size: 0.95rem; color: var(--ink-lt); line-height: 1.7; }
-.media-card-footer {
-  margin-top: 1.5rem; padding-top: 1rem;
-  border-top: 1px solid var(--border);
-  display: flex; align-items: center; justify-content: space-between;
-}
-.media-card-footer span { font-size: 0.78rem; color: var(--ink-lt); }
-.media-card-footer a {
-  font-size: 0.82rem; color: var(--saffron);
-  text-decoration: none; letter-spacing: 0.06em;
-  display: flex; align-items: center; gap: 0.4rem;
-}
-.media-card-footer a:hover { gap: 0.8rem; }
-
-/* ========== IMPACT NUMBERS ========== */
-#impact {
-  padding: 5rem 0;
-  background: var(--saffron);
-}
-.impact-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
-}
-.impact-item {
-  text-align: center; padding: 2rem;
-  border-right: 1px solid rgba(255,255,255,0.2);
-}
-.impact-item:last-child { border-right: none; }
-.impact-num {
-  font-family: var(--ff-display); font-size: 3.5rem;
-  font-weight: 700; color: var(--white); line-height: 1;
-}
-.impact-label {
-  font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase;
-  color: rgba(255,255,255,0.75); margin-top: 0.5rem;
-}
-
-/* ========== CONTACT / FOOTER ========== */
-#contact {
-  padding: 6rem 0 4rem;
-  background: var(--ink);
-  position: relative; overflow: hidden;
-}
-#contact::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--saffron), var(--gold), var(--saffron));
-}
-.contact-grid {
-  display: grid; grid-template-columns: 5fr 7fr; gap: 5rem; align-items: start;
-}
-.contact-left h2 {
-  font-family: var(--ff-display); font-size: clamp(2rem, 3vw, 2.8rem);
-  font-weight: 300; color: var(--white); line-height: 1.2; margin-bottom: 1rem;
-}
-.contact-left h2 em { color: var(--gold-lt); font-style: italic; }
-.contact-left p { color: rgba(250,247,241,0.6); font-size: 1rem; line-height: 1.8; margin-bottom: 2rem; }
-.contact-info { display: flex; flex-direction: column; gap: 1rem; }
-.info-row {
-  display: flex; align-items: flex-start; gap: 1rem;
-  color: rgba(250,247,241,0.75); font-size: 0.95rem;
-}
-.info-icon { font-size: 1.2rem; flex-shrink: 0; padding-top: 0.1rem; }
-
-.contact-form {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(197,151,58,0.15);
-  border-radius: 4px; padding: 2.5rem;
-}
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.form-group { margin-bottom: 1rem; }
-.form-group label {
-  display: block; font-size: 0.72rem; letter-spacing: 0.15em;
-  text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem;
-}
-.form-group input, .form-group textarea, .form-group select {
-  width: 100%; background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(197,151,58,0.2); border-radius: 3px;
-  padding: 0.75rem 1rem; color: var(--white);
-  font-family: var(--ff-body); font-size: 0.95rem;
-  outline: none; transition: border-color 0.25s;
-}
-.form-group input::placeholder, .form-group textarea::placeholder { color: rgba(250,247,241,0.3); }
-.form-group input:focus, .form-group textarea:focus { border-color: var(--saffron); }
-.form-group textarea { min-height: 100px; resize: vertical; }
-.form-group select option { background: var(--ink); }
-.btn-submit {
-  width: 100%; background: var(--saffron); color: var(--white);
-  border: none; padding: 0.9rem; border-radius: 3px;
-  font-family: var(--ff-body); font-size: 0.95rem;
-  letter-spacing: 0.08em; cursor: pointer; font-weight: 600;
-  transition: background 0.25s;
-}
-.btn-submit:hover { background: var(--saffron-lt); }
-
-.footer-bottom {
-  margin-top: 5rem; padding-top: 2rem;
-  border-top: 1px solid rgba(197,151,58,0.1);
-  display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: wrap; gap: 1rem;
-}
-.footer-logo-text {
-  font-family: var(--ff-display); font-size: 1rem;
-  color: rgba(250,247,241,0.5);
-}
-.footer-logo-text strong { color: var(--gold); }
-.footer-copy { font-size: 0.78rem; color: rgba(250,247,241,0.35); }
-.footer-shloka {
-  font-family: var(--ff-devan); font-size: 0.9rem;
-  color: rgba(197,151,58,0.5); letter-spacing: 0.05em;
-}
-
-/* ========== MOBILE NAV ========== */
-.mobile-menu {
-  position: fixed; inset: 0; z-index: 999;
-  background: var(--white); padding: 5rem 2rem 2rem;
-  transform: translateX(100%); transition: transform 0.4s ease;
-  display: flex; flex-direction: column; gap: 2rem;
-}
-.mobile-menu.open { transform: translateX(0); }
-.mobile-menu a {
-  font-family: var(--ff-display); font-size: 2rem; font-weight: 300;
-  color: var(--forest); text-decoration: none; border-bottom: 1px solid var(--border);
-  padding-bottom: 1rem;
-  transition: color 0.2s;
-}
-.mobile-menu a:hover { color: var(--saffron); }
-
-/* ========== ANIMATIONS ========== */
-.fade-in {
-  opacity: 0; transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.fade-in.visible { opacity: 1; transform: none; }
-.fade-in-delay-1 { transition-delay: 0.1s; }
-.fade-in-delay-2 { transition-delay: 0.2s; }
-.fade-in-delay-3 { transition-delay: 0.3s; }
-
-/* ========== RESPONSIVE ========== */
-@media (max-width: 900px) {
-  .hero-content { grid-template-columns: 1fr; }
-  .hero-right { display: none; }
-  .about-grid { grid-template-columns: 1fr; }
-  .about-visual { display: none; }
-  .activities-grid { grid-template-columns: 1fr 1fr; }
-  .activity-card:nth-child(1), .activity-card:nth-child(6) { grid-column: span 1; }
-  .founder-grid { grid-template-columns: 1fr; }
-  .office-bearers { grid-template-columns: 1fr 1fr; }
-  .impact-grid { grid-template-columns: 1fr 1fr; }
-  .impact-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.2); }
-  .contact-grid { grid-template-columns: 1fr; }
-  .media-grid { grid-template-columns: 1fr; }
-  .nav-links { display: none; }
-  .hamburger { display: flex; }
-}
-@media (max-width: 560px) {
-  .activities-grid { grid-template-columns: 1fr; }
-  .office-bearers { grid-template-columns: 1fr; }
-  .impact-grid { grid-template-columns: 1fr 1fr; }
-  .form-row { grid-template-columns: 1fr; }
-  .about-pillars { flex-wrap: wrap; }
-}
-</style>
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-<!-- ===== NAVBAR ===== -->
+
 <nav id="navbar">
   <div class="nav-inner">
-    <a href="#" class="nav-logo">
+    <a href="index.html" class="nav-logo">
       <div class="nav-logo-emblem">🪔</div>
       <div class="nav-logo-text">
         <span>Thakur Ram Singh Smriti Nyas</span>
@@ -797,65 +21,65 @@ body::before {
       </div>
     </a>
     <ul class="nav-links">
-      <li><a href="#about-intro">About</a></li>
-      <li><a href="#activities">Activities</a></li>
-      <li><a href="#founder">Our Founder</a></li>
-      <li><a href="#team">Team</a></li>
-      <li><a href="#media">Media</a></li>
-      <li><a href="#contact" class="nav-cta">Connect</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="activities.html">Activities</a></li>
+      <li><a href="founder.html">Founder</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="contact.html" class="nav-cta">Connect</a></li>
     </ul>
-    <div class="hamburger" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
-    </div>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></span></div>
   </div>
 </nav>
-
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#about-intro" onclick="toggleMenu()">About</a>
-  <a href="#activities" onclick="toggleMenu()">Activities</a>
-  <a href="#founder" onclick="toggleMenu()">Our Founder</a>
-  <a href="#team" onclick="toggleMenu()">Team</a>
-  <a href="#media" onclick="toggleMenu()">Media</a>
-  <a href="#contact" onclick="toggleMenu()">Connect</a>
+  <a href="index.html" onclick="toggleMenu()">Home</a>
+  <a href="about.html" onclick="toggleMenu()">About</a>
+  <a href="activities.html" onclick="toggleMenu()">Activities</a>
+  <a href="founder.html" onclick="toggleMenu()">Founder</a>
+  <a href="gallery.html" onclick="toggleMenu()">Gallery</a>
+  <a href="media.html" onclick="toggleMenu()">Media</a>
+  <a href="contact.html" onclick="toggleMenu()">Connect</a>
 </div>
 
-<!-- ===== HERO ===== -->
-<section id="hero">
+<section class="hero">
   <div class="hero-bg-pattern"></div>
-  <div class="hero-mandala">
-    <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" fill="none">
-      <circle cx="250" cy="250" r="240" stroke="white" stroke-width="0.5"/>
-      <circle cx="250" cy="250" r="180" stroke="white" stroke-width="0.5"/>
-      <circle cx="250" cy="250" r="120" stroke="white" stroke-width="0.5"/>
-      <circle cx="250" cy="250" r="60" stroke="white" stroke-width="0.5"/>
-      <g stroke="white" stroke-width="0.5">
-        <line x1="250" y1="10" x2="250" y2="490"/>
-        <line x1="10" y1="250" x2="490" y2="250"/>
-        <line x1="75" y1="75" x2="425" y2="425"/>
-        <line x1="425" y1="75" x2="75" y2="425"/>
-        <line x1="10" y1="165" x2="490" y2="335"/>
-        <line x1="10" y1="335" x2="490" y2="165"/>
-        <line x1="165" y1="10" x2="335" y2="490"/>
-        <line x1="335" y1="10" x2="165" y2="490"/>
-      </g>
-      <g fill="white">
-        <circle cx="250" cy="10" r="3"/>
-        <circle cx="250" cy="490" r="3"/>
-        <circle cx="10" cy="250" r="3"/>
-        <circle cx="490" cy="250" r="3"/>
-        <circle cx="75" cy="75" r="3"/>
-        <circle cx="425" cy="425" r="3"/>
-        <circle cx="425" cy="75" r="3"/>
-        <circle cx="75" cy="425" r="3"/>
-        <circle cx="250" cy="70" r="5"/>
-        <circle cx="250" cy="430" r="5"/>
-        <circle cx="70" cy="250" r="5"/>
-        <circle cx="430" cy="250" r="5"/>
-      </g>
-    </svg>
-  </div>
+  
+<div class="hero-mandala">
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <circle cx="250" cy="250" r="240" stroke="white" stroke-width="0.5"/>
+  <circle cx="250" cy="250" r="180" stroke="white" stroke-width="0.5"/>
+  <circle cx="250" cy="250" r="120" stroke="white" stroke-width="0.5"/>
+  <circle cx="250" cy="250" r="60" stroke="white" stroke-width="0.5"/>
+  <g stroke="white" stroke-width="0.5">
+    <line x1="250" y1="10" x2="250" y2="490"/>
+    <line x1="10" y1="250" x2="490" y2="250"/>
+    <line x1="75" y1="75" x2="425" y2="425"/>
+    <line x1="425" y1="75" x2="75" y2="425"/>
+    <line x1="10" y1="165" x2="490" y2="335"/>
+    <line x1="10" y1="335" x2="490" y2="165"/>
+    <line x1="165" y1="10" x2="335" y2="490"/>
+    <line x1="335" y1="10" x2="165" y2="490"/>
+  </g>
+  <g fill="white">
+    <circle cx="250" cy="10" r="3"/>
+    <circle cx="250" cy="490" r="3"/>
+    <circle cx="10" cy="250" r="3"/>
+    <circle cx="490" cy="250" r="3"/>
+    <circle cx="75" cy="75" r="3"/>
+    <circle cx="425" cy="425" r="3"/>
+    <circle cx="425" cy="75" r="3"/>
+    <circle cx="75" cy="425" r="3"/>
+    <circle cx="250" cy="70" r="5"/>
+    <circle cx="250" cy="430" r="5"/>
+    <circle cx="70" cy="250" r="5"/>
+    <circle cx="430" cy="250" r="5"/>
+  </g>
+</svg>
+</div>
+
   <div class="hero-content">
-    <div class="hero-left">
+    <div>
       <div class="hero-tag">Himachal Pradesh • Est. Public Charitable Trust</div>
       <h1 class="hero-title">
         Serving Society<br>
@@ -864,11 +88,14 @@ body::before {
       </h1>
       <p class="hero-subtitle-devan">सर्वे भवन्तु सुखिनः, सर्वे सन्तु निरामयाः</p>
       <p class="hero-desc">
-        Thakur Ram Singh Smriti Nyas carries forward a legacy of selfless service, rooted in the values of Bharatiya Sanskriti — working for the holistic upliftment of communities across Himachal Pradesh.
+        Thakur Ram Singh Smriti Nyas carries forward a legacy of selfless service,
+        rooted in Bharatiya Sanskriti — combining heritage, community action,
+        and practical support through education, relief, environment, and youth empowerment.
       </p>
       <div class="hero-actions">
-        <a href="#activities" class="btn-primary">Our Work ↓</a>
-        <a href="#about-intro" class="btn-outline">Know More →</a>
+        <a href="activities.html" class="btn-primary">Our Work ↓</a>
+        <a href="about.html" class="btn-outline">Know More →</a>
+        <a href="gallery.html" class="btn-soft">See Gallery</a>
       </div>
     </div>
     <div class="hero-right">
@@ -879,32 +106,15 @@ body::before {
         </div>
         <div style="margin-left:auto;font-family:var(--ff-devan);font-size:2.5rem;color:var(--gold);opacity:0.5">सेवा</div>
       </div>
-      <div class="hero-stat-card">
-        <div class="hero-stat-icon">📚</div>
-        <div class="hero-stat-label">Education & Skills</div>
-        <p class="hero-stat-text">Empowering youth through learning and capacity building</p>
-      </div>
-      <div class="hero-stat-card">
-        <div class="hero-stat-icon">🏥</div>
-        <div class="hero-stat-label">Healthcare</div>
-        <p class="hero-stat-text">Community health, awareness & preventive care</p>
-      </div>
-      <div class="hero-stat-card">
-        <div class="hero-stat-icon">🌱</div>
-        <div class="hero-stat-label">Environment</div>
-        <p class="hero-stat-text">Plantation, conservation & water awareness</p>
-      </div>
-      <div class="hero-stat-card">
-        <div class="hero-stat-icon">🤝</div>
-        <div class="hero-stat-label">Social Welfare</div>
-        <p class="hero-stat-text">Upliftment for underprivileged sections of society</p>
-      </div>
+      <div class="hero-stat-card"><div class="hero-stat-icon">📚</div><div class="hero-stat-label">Education & Skills</div><p class="hero-stat-text">Empowering youth through learning and capacity building</p></div>
+      <div class="hero-stat-card"><div class="hero-stat-icon">🏥</div><div class="hero-stat-label">Healthcare</div><p class="hero-stat-text">Community health, awareness & preventive care</p></div>
+      <div class="hero-stat-card"><div class="hero-stat-icon">🌱</div><div class="hero-stat-label">Environment</div><p class="hero-stat-text">Plantation, conservation & water awareness</p></div>
+      <div class="hero-stat-card"><div class="hero-stat-icon">🤝</div><div class="hero-stat-label">Social Welfare</div><p class="hero-stat-text">Upliftment for underprivileged sections of society</p></div>
     </div>
   </div>
   <a class="hero-scroll" href="#about-intro">Scroll</a>
 </section>
 
-<!-- ===== MARQUEE ===== -->
 <div class="marquee-strip">
   <div class="marquee-track">
     <span class="marquee-item">Education & Skills</span>
@@ -930,260 +140,81 @@ body::before {
   </div>
 </div>
 
-<!-- ===== ABOUT INTRO ===== -->
-<section id="about-intro">
+<section id="about-intro" class="section">
   <div class="container">
     <div class="about-grid">
       <div class="about-visual fade-in">
         <div class="about-img-frame">
           <div class="about-img-inner">
             <div class="big-om">ॐ</div>
-            <p>
-              सर्वे भद्राणि पश्यन्तु<br>
-              मा कश्चिद् दुःखभाग्भवेत्
-            </p>
+            <p>सर्वे भद्राणि पश्यन्तु<br>मा कश्चिद् दुःखभाग्भवेत्</p>
           </div>
         </div>
-        <div class="about-badge">
-          <span>H.P.</span>
-          <span>Trust</span>
-        </div>
+        <div class="about-badge"><span>H.P.</span><span>Trust</span></div>
       </div>
-      <div class="about-content">
+      <div class="about-content fade-in">
         <span class="section-label">About the Trust</span>
-        <h2>
-          Founded in <em>Remembrance,</em><br>
-          Built for <em>Service</em>
-        </h2>
+        <h2>Founded in <em>Remembrance,</em><br>Built for <em>Service</em></h2>
         <div class="divider"></div>
-        <p>
-          Thakur Ram Singh Smriti Nyas, Himachal Pradesh is a public charitable institution established with a vision to serve society through meaningful, sustainable, and value-driven initiatives — founded in the revered memory of Shraddheya Thakur Ram Singh Ji.
-        </p>
-        <p>
-          His life exemplified selfless service, integrity, discipline, and an unwavering commitment to the welfare of society. His ideals form the moral and philosophical foundation upon which the Trust carries forward its work.
-        </p>
-        <div class="about-shloka">
-          <p>"सर्वे भवन्तु सुखिनः, सर्वे सन्तु निरामयाः।<br>
-          सर्वे भद्राणि पश्यन्तु, मा कश्चिद् दुःखभाग्भवेत्॥"</p>
-        </div>
-        <p>
-          Rooted in the ethos of Bharatiya Sanskriti, the Trust operates on the principles that true development is the holistic upliftment of individuals and communities — socially, culturally, and spiritually.
-        </p>
+        <p>Thakur Ram Singh Smriti Nyas, Himachal Pradesh is a public charitable institution established with a vision to serve society through meaningful, sustainable, and value-driven initiatives — founded in the revered memory of Shraddheya Thakur Ram Singh Ji.</p>
+        <p>His life exemplified selfless service, integrity, discipline, and an unwavering commitment to the welfare of society. His ideals form the moral and philosophical foundation upon which the Trust carries forward its work.</p>
+        <div class="about-shloka"><p>"सर्वे भवन्तु सुखिनः, सर्वे सन्तु निरामयाः।<br>सर्वे भद्राणि पश्यन्तु, मा कश्चिद् दुःखभाग्भवेत्॥"</p></div>
+        <p>Rooted in the ethos of Bharatiya Sanskriti, the Trust operates on the principles that true development is the holistic upliftment of individuals and communities — socially, culturally, and spiritually.</p>
         <div class="about-pillars">
-          <div class="pillar">
-            <div class="pillar-icon">🙏</div>
-            <span class="pillar-word">Seva</span>
-            <span class="pillar-word-devan">सेवा</span>
-          </div>
-          <div class="pillar">
-            <div class="pillar-icon">🌸</div>
-            <span class="pillar-word">Sanskar</span>
-            <span class="pillar-word-devan">संस्कार</span>
-          </div>
-          <div class="pillar">
-            <div class="pillar-icon">🤝</div>
-            <span class="pillar-word">Samrasta</span>
-            <span class="pillar-word-devan">समरसता</span>
-          </div>
+          <div class="pillar"><div class="pillar-icon">🙏</div><span class="pillar-word">Seva</span><span class="pillar-word-devan">सेवा</span></div>
+          <div class="pillar"><div class="pillar-icon">🌸</div><span class="pillar-word">Sanskar</span><span class="pillar-word-devan">संस्कार</span></div>
+          <div class="pillar"><div class="pillar-icon">🤝</div><span class="pillar-word">Samrasta</span><span class="pillar-word-devan">समरसता</span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== IMPACT NUMBERS ===== -->
-<section id="impact">
+<section class="vision">
   <div class="container">
-    <div class="impact-grid">
-      <div class="impact-item">
-        <div class="impact-num">12+</div>
-        <div class="impact-label">Service Focus Areas</div>
-      </div>
-      <div class="impact-item">
-        <div class="impact-num">H.P.</div>
-        <div class="impact-label">Primary Region of Work</div>
-      </div>
-      <div class="impact-item">
-        <div class="impact-num">∞</div>
-        <div class="impact-label">Commitment to Seva</div>
-      </div>
-      <div class="impact-item">
-        <div class="impact-num">0</div>
-        <div class="impact-label">Discrimination — Caste, Creed or Religion</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== ACTIVITIES ===== -->
-<section id="activities">
-  <div class="container">
-    <div class="section-header fade-in">
-      <span class="section-label">What We Do</span>
-      <h2>Activities & <strong>Focus Areas</strong></h2>
+    <div class="vision-header fade-in">
+      <span class="section-label" style="color:var(--gold);">Our Vision</span>
+      <h2>Guiding <strong style="color:var(--gold-lt);">Principles</strong></h2>
       <div class="divider center"></div>
-      <p style="max-width:600px;margin:0 auto;color:var(--ink-lt);font-size:1.05rem;">
-        Centered on key pillars of social development, guided by timeless principles and a vision of holistic nation-building.
-      </p>
+      <div class="big-shloka" style="font-family:var(--ff-devan);color:var(--gold);">सेवा परमो धर्मः — Service is the Highest Dharma</div>
     </div>
-    <div class="activities-grid">
-      <div class="activity-card fade-in">
-        <span class="card-num">01</span>
-        <div class="card-icon">📚</div>
-        <div class="card-title">Education & Skill Development</div>
-        <div class="card-desc">Promoting quality education and skill development among youth — enhancing learning opportunities, academic support, and building capacities that empower individuals to become self-reliant.</div>
-        <div class="card-shloka">विद्या ददाति विनयं, विनयाद् याति पात्रताम्।<br>पात्रत्वात् धनमाप्नोति, धनात् धर्मं ततः सुखम्॥</div>
-      </div>
-      <div class="activity-card fade-in fade-in-delay-1">
-        <span class="card-num">02</span>
-        <div class="card-icon">🏥</div>
-        <div class="card-title">Healthcare & Well-being</div>
-        <div class="card-desc">Improving community health through awareness programs, preventive care initiatives, and promotion of physical and mental well-being for a healthier society.</div>
-        <div class="card-shloka">आरोग्यं परमं भाग्यं, स्वास्थ्यं सर्वार्थसाधनम्।</div>
-      </div>
-      <div class="activity-card fade-in fade-in-delay-2">
-        <span class="card-num">03</span>
-        <div class="card-icon">🌾</div>
-        <div class="card-title">Rural Development & Livelihood</div>
-        <div class="card-desc">Strengthening livelihoods, promoting self-sufficiency, and improving socio-economic conditions of rural communities across Himachal Pradesh.</div>
-        <div class="card-shloka">कृषिर्वलम् — Agriculture is the strength of the nation.</div>
-      </div>
-      <div class="activity-card fade-in fade-in-delay-1">
-        <span class="card-num">04</span>
-        <div class="card-icon">🌿</div>
-        <div class="card-title">Environmental Conservation</div>
-        <div class="card-desc">Promoting environmental awareness, plantation drives, water conservation, and responsible use of natural resources — emphasizing harmony with nature.</div>
-        <div class="card-shloka">माता भूमिः पुत्रोऽहं पृथिव्याः</div>
-      </div>
-      <div class="activity-card fade-in fade-in-delay-2">
-        <span class="card-num">05</span>
-        <div class="card-icon">🐄</div>
-        <div class="card-title">Animal Welfare & Gaushala</div>
-        <div class="card-desc">Supporting protection and care of animals, especially indigenous cattle, recognizing their cultural, ecological, and economic significance in Indian society.</div>
-        <div class="card-shloka">गावो विश्वस्य मातरः — Cows are the mothers of the world.</div>
-      </div>
-      <div class="activity-card fade-in fade-in-delay-1">
-        <span class="card-num">06</span>
-        <div class="card-icon">🤝</div>
-        <div class="card-title">Social Welfare & Community</div>
-        <div class="card-desc">Working for the upliftment of underprivileged and marginalized sections of society — women, children, elderly, and differently-abled — promoting equality and dignity.</div>
-        <div class="card-shloka">परहितार्थं इदं शरीरम्</div>
-      </div>
-      <div class="activity-card fade-in fade-in-delay-2">
-        <span class="card-num">07</span>
-        <div class="card-icon">🇮🇳</div>
-        <div class="card-title">Youth Empowerment</div>
-        <div class="card-desc">Special emphasis on empowering youth through physical, intellectual, and moral development — recognizing them as the foundation of a strong and self-reliant nation.</div>
-        <div class="card-shloka">उत्तिष्ठत जाग्रत प्राप्य वरान्निबोधत</div>
-      </div>
-      <div class="activity-card fade-in fade-in-delay-3">
-        <span class="card-num">08</span>
-        <div class="card-icon">🎭</div>
-        <div class="card-title">Culture & Relief</div>
-        <div class="card-desc">Organizing social and cultural community programs promoting harmony, cultural values, and undertaking relief activities during natural calamities and emergencies.</div>
-        <div class="card-shloka">निःस्वार्थ सेवा — Selfless Service Always</div>
-      </div>
+    <div class="vision-items">
+      <div class="vision-item fade-in"><div class="vision-item-num">01</div><div><div class="vision-item-title">Education for All</div><div class="vision-item-desc">To promote education by establishing and supporting schools, colleges, coaching centers, and providing scholarships to deserving and needy students without discrimination.</div></div></div>
+      <div class="vision-item fade-in"><div class="vision-item-num">02</div><div><div class="vision-item-title">Universal Healthcare</div><div class="vision-item-desc">To establish hospitals, dispensaries, and organize medical camps, while promoting health awareness, yoga, and physical fitness for the general well-being of all.</div></div></div>
+      <div class="vision-item fade-in"><div class="vision-item-num">03</div><div><div class="vision-item-title">Sustainable Development</div><div class="vision-item-desc">To undertake rural development activities including agriculture, self-employment, livelihood generation, and environmental protection through conservation and awareness.</div></div></div>
+      <div class="vision-item fade-in"><div class="vision-item-num">04</div><div><div class="vision-item-title">Inclusive Society</div><div class="vision-item-desc">To provide assistance to poor, needy, and underprivileged sections including women, children, elderly, and differently-abled, while organizing cultural programs promoting social harmony.</div></div></div>
+      <div class="vision-item fade-in"><div class="vision-item-num">05</div><div><div class="vision-item-title">Nation Building</div><div class="vision-item-desc">To promote research, knowledge dissemination, and charitable activities for the benefit of society — without discrimination of caste, creed, or religion — contributing to Rashtra Nirman.</div></div></div>
     </div>
   </div>
 </section>
 
-<!-- ===== FOUNDER ===== -->
-<section id="founder">
+<section id="founder" class="founder">
   <div class="container">
     <div class="founder-grid">
       <div class="founder-portrait fade-in">
-        <div class="portrait-circle">🦁</div>
+        <div class="founder-photo"><img src="assets/images/thakur.webp" alt="Thakur Ram Singh Ji"></div>
         <h3>Shraddheya Thakur Ram Singh Ji</h3>
         <div class="years">A Life of Selfless Service</div>
-        <p style="color:rgba(250,247,241,0.6);font-size:0.9rem;margin-top:1rem;line-height:1.7;">
-          The guiding light behind the Trust — a life that exemplified integrity, discipline, and unwavering commitment to social welfare.
-        </p>
-        <a href="https://en.wikipedia.org/wiki/Thakur_Ram_Singh" target="_blank" class="wiki-link">
-          📖 Read on Wikipedia →
-        </a>
+        <p style="color:rgba(250,247,241,0.6);font-size:0.9rem;margin-top:1rem;line-height:1.7;">The guiding light behind the Trust — a life that exemplified integrity, discipline, and unwavering commitment to social welfare.</p>
+        <a href="https://en.wikipedia.org/wiki/Thakur_Ram_Singh" target="_blank" rel="noopener noreferrer" class="wiki-link">Read More →</a>
       </div>
       <div class="founder-content fade-in fade-in-delay-1">
         <span class="section-label">Our Founder</span>
         <h2>The <em>Inspiration</em> Behind<br>Every Initiative</h2>
         <div class="divider"></div>
-        <p>
-          The Trust draws continuous inspiration from the life of Shraddheya Thakur Ram Singh Ji, a figure who devoted his existence to the service of society. His principles of seva (service), integrity, and social responsibility form the moral and philosophical backbone of the Trust's work.
-        </p>
-        <p>
-          His ideals remind us that true leadership is not about power or position, but about the depth of one's commitment to the people. Every initiative undertaken by the Trust is a step towards honoring that legacy.
-        </p>
-        <div class="founder-quote">
-          <p>"Let a person uplift oneself through one's own efforts — and through that elevation, serve the world."</p>
-        </div>
-        <p>
-          The Trust combines his traditional wisdom with contemporary methods, ensuring development remains rooted in cultural values while addressing modern challenges. Community participation and collective responsibility are at the heart of this approach.
-        </p>
-        <div class="founder-values">
-          <span class="value-tag">Selfless Service</span>
-          <span class="value-tag">Integrity</span>
-          <span class="value-tag">Discipline</span>
-          <span class="value-tag">Social Responsibility</span>
-          <span class="value-tag">Rashtra Nirman</span>
-          <span class="value-tag">Cultural Preservation</span>
+        <p>The Trust draws continuous inspiration from the life of Shraddheya Thakur Ram Singh Ji, a figure who devoted his existence to the service of society. His principles of seva (service), integrity, and social responsibility form the moral and philosophical backbone of the Trust's work.</p>
+        <p>His ideals remind us that true leadership is not about power or position, but about the depth of one's commitment to the people. Every initiative undertaken by the Trust is a step towards honoring that legacy.</p>
+        <div class="founder-quote"><p>"Let a person uplift oneself through one's own efforts — and through that elevation, serve the world."</p></div>
+        <p>The Trust combines his traditional wisdom with contemporary methods, ensuring development remains rooted in cultural values while addressing modern challenges. Community participation and collective responsibility are at the heart of this approach.</p>
+        <div class="value-tags">
+          <span class="value-tag">Selfless Service</span><span class="value-tag">Integrity</span><span class="value-tag">Discipline</span><span class="value-tag">Social Responsibility</span><span class="value-tag">Rashtra Nirman</span><span class="value-tag">Cultural Preservation</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== VISION ===== -->
-<section id="vision">
-  <div class="container">
-    <div class="vision-header fade-in">
-      <span class="section-label" style="color:var(--gold);">Our Vision</span>
-      <h2 style="color:var(--white);">Guiding <strong style="color:var(--gold-lt);">Principles</strong></h2>
-      <div class="divider center"></div>
-      <div class="big-shloka">
-        सेवा परमो धर्मः — Service is the Highest Dharma
-      </div>
-    </div>
-    <div class="vision-items">
-      <div class="vision-item fade-in">
-        <div class="vision-item-num">01</div>
-        <div class="vision-item-body">
-          <div class="vision-item-title">Education for All</div>
-          <div class="vision-item-desc">To promote education by establishing and supporting schools, colleges, coaching centers, and providing scholarships to deserving and needy students without discrimination.</div>
-        </div>
-      </div>
-      <div class="vision-item fade-in">
-        <div class="vision-item-num">02</div>
-        <div class="vision-item-body">
-          <div class="vision-item-title">Universal Healthcare</div>
-          <div class="vision-item-desc">To establish hospitals, dispensaries, and organize medical camps, while promoting health awareness, yoga, and physical fitness for the general well-being of all.</div>
-        </div>
-      </div>
-      <div class="vision-item fade-in">
-        <div class="vision-item-num">03</div>
-        <div class="vision-item-body">
-          <div class="vision-item-title">Sustainable Development</div>
-          <div class="vision-item-desc">To undertake rural development activities including agriculture, self-employment, livelihood generation, and environmental protection through conservation and awareness.</div>
-        </div>
-      </div>
-      <div class="vision-item fade-in">
-        <div class="vision-item-num">04</div>
-        <div class="vision-item-body">
-          <div class="vision-item-title">Inclusive Society</div>
-          <div class="vision-item-desc">To provide assistance to poor, needy, and underprivileged sections including women, children, elderly, and differently-abled, while organizing cultural programs promoting social harmony.</div>
-        </div>
-      </div>
-      <div class="vision-item fade-in">
-        <div class="vision-item-num">05</div>
-        <div class="vision-item-body">
-          <div class="vision-item-title">Nation Building</div>
-          <div class="vision-item-desc">To promote research, knowledge dissemination, and charitable activities for the benefit of society — without discrimination of caste, creed, or religion — contributing to Rashtra Nirman.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== TEAM ===== -->
-<section id="team">
+<section id="team" class="section">
   <div class="container team-container">
     <div class="section-header fade-in">
       <span class="section-label">The People</span>
@@ -1191,91 +222,171 @@ body::before {
       <div class="divider center"></div>
       <p style="color:var(--ink-lt);font-size:1rem;">Hover or tap on a card to read their message</p>
     </div>
-    <div class="office-bearers">
-      <div class="flip-card" onclick="this.classList.toggle('flipped')">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <div class="member-avatar">👤</div>
-            <div class="member-role">Chairman</div>
-            <div class="member-name">Shri Ashok Kumar Sharma</div>
-            <div class="flip-hint">Tap to read message ↻</div>
-          </div>
-          <div class="flip-back">
-            <div class="member-message">"It is our collective duty to serve society with honesty and dedication. The Trust is a platform to translate the ideals of Thakur Ram Singh Ji into meaningful action for the people of Himachal Pradesh."</div>
-            <div class="member-name-back">— Shri Ashok Kumar Sharma</div>
-          </div>
-        </div>
+    
+<div class="office-bearers">
+  <div class="flip-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-inner">
+      <div class="flip-front">
+        <div class="member-avatar">👤</div>
+        <div class="member-role">Chairman</div>
+        <div class="member-name">Shri Ashok Kumar Sharma</div>
+        <div class="flip-hint">Tap to read message ↻</div>
       </div>
-      <div class="flip-card" onclick="this.classList.toggle('flipped')">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <div class="member-avatar">👤</div>
-            <div class="member-role">Vice-Chairman</div>
-            <div class="member-name">Shri Rajinder Kumar Sharma</div>
-            <div class="flip-hint">Tap to read message ↻</div>
-          </div>
-          <div class="flip-back">
-            <div class="member-message">"True service is when we work without expectation of reward. The Trust stands as a lighthouse for the underprivileged — and we remain committed to keeping that light burning bright."</div>
-            <div class="member-name-back">— Shri Rajinder Kumar Sharma</div>
-          </div>
-        </div>
-      </div>
-      <div class="flip-card" onclick="this.classList.toggle('flipped')">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <div class="member-avatar">👤</div>
-            <div class="member-role">Secretary</div>
-            <div class="member-name">Shri Arvind Rattan</div>
-            <div class="flip-hint">Tap to read message ↻</div>
-          </div>
-          <div class="flip-back">
-            <div class="member-message">"Our work is guided by the principle of 'Sarvajan Hitaya' — for the benefit of all. Every program we undertake is a step toward building a more equitable and harmonious society."</div>
-            <div class="member-name-back">— Shri Arvind Rattan</div>
-          </div>
-        </div>
-      </div>
-      <div class="flip-card" onclick="this.classList.toggle('flipped')">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <div class="member-avatar">👤</div>
-            <div class="member-role">Treasurer</div>
-            <div class="member-name">Shri Kishor Kumar</div>
-            <div class="flip-hint">Tap to read message ↻</div>
-          </div>
-          <div class="flip-back">
-            <div class="member-message">"Every rupee entrusted to this Trust is a sacred responsibility. We ensure complete transparency and accountability in all our financial operations, honoring the faith of our donors and community."</div>
-            <div class="member-name-back">— Shri Kishor Kumar</div>
-          </div>
-        </div>
+      <div class="flip-back">
+        <div class="member-message">"It is our collective duty to serve society with honesty and dedication. The Trust is a platform to translate the ideals of Thakur Ram Singh Ji into meaningful action for the people of Himachal Pradesh."</div>
+        <div class="member-name-back">— Shri Ashok Kumar Sharma</div>
       </div>
     </div>
+  </div>
+  <div class="flip-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-inner">
+      <div class="flip-front">
+        <div class="member-avatar">👤</div>
+        <div class="member-role">Vice-Chairman</div>
+        <div class="member-name">Shri Rajinder Kumar Sharma</div>
+        <div class="flip-hint">Tap to read message ↻</div>
+      </div>
+      <div class="flip-back">
+        <div class="member-message">"True service is when we work without expectation of reward. The Trust stands as a lighthouse for the underprivileged — and we remain committed to keeping that light burning bright."</div>
+        <div class="member-name-back">— Shri Rajinder Kumar Sharma</div>
+      </div>
+    </div>
+  </div>
+  <div class="flip-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-inner">
+      <div class="flip-front">
+        <div class="member-avatar">👤</div>
+        <div class="member-role">Secretary</div>
+        <div class="member-name">Shri Arvind Rattan</div>
+        <div class="flip-hint">Tap to read message ↻</div>
+      </div>
+      <div class="flip-back">
+        <div class="member-message">"Our work is guided by the principle of 'Sarvajan Hitaya' — for the benefit of all. Every program we undertake is a step toward building a more equitable and harmonious society."</div>
+        <div class="member-name-back">— Shri Arvind Rattan</div>
+      </div>
+    </div>
+  </div>
+  <div class="flip-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-inner">
+      <div class="flip-front">
+        <div class="member-avatar">👤</div>
+        <div class="member-role">Treasurer</div>
+        <div class="member-name">Shri Kishor Kumar</div>
+        <div class="flip-hint">Tap to read message ↻</div>
+      </div>
+      <div class="flip-back">
+        <div class="member-message">"Every rupee entrusted to this Trust is a sacred responsibility. We ensure complete transparency and accountability in all our financial operations, honoring the faith of our donors and community."</div>
+        <div class="member-name-back">— Shri Kishor Kumar</div>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <div class="trust-board fade-in">
-      <h3>The Trust <strong>Board</strong></h3>
-      <div class="board-members">
-        <div class="board-member">
-          <div class="board-member-dot">CP</div>
-          <div class="board-member-name">Sh. Chander Prakash</div>
-        </div>
-        <div class="board-member">
-          <div class="board-member-dot">RK</div>
-          <div class="board-member-name">Sh. Raj Kumar</div>
-        </div>
-        <div class="board-member">
-          <div class="board-member-dot">RS</div>
-          <div class="board-member-name">Sh. Ranbir Singh Rana</div>
-        </div>
-        <div class="board-member">
-          <div class="board-member-dot">KK</div>
-          <div class="board-member-name">Sh. Kuldeep Kumar</div>
-        </div>
+<div class="trust-board fade-in">
+  <h3>The Trust <strong>Board</strong></h3>
+  <div class="board-members">
+    <div class="board-member"><div class="board-member-dot">CP</div><div class="board-member-name">Sh. Chander Prakash</div></div>
+    <div class="board-member"><div class="board-member-dot">RK</div><div class="board-member-name">Sh. Raj Kumar</div></div>
+    <div class="board-member"><div class="board-member-dot">RS</div><div class="board-member-name">Sh. Ranbir Singh Rana</div></div>
+    <div class="board-member"><div class="board-member-dot">KK</div><div class="board-member-name">Sh. Kuldeep Kumar</div></div>
+  </div>
+</div>
+
+  </div>
+</section>
+<section class="stats-strip">
+  <div class="container">
+    <div class="impact-grid">
+      <div class="impact-item"><div class="impact-num">12+</div><div class="impact-label">Service Focus Areas</div></div>
+      <div class="impact-item"><div class="impact-num">H.P.</div><div class="impact-label">Primary Region of Work</div></div>
+      <div class="impact-item"><div class="impact-num">∞</div><div class="impact-label">Commitment to Seva</div></div>
+      <div class="impact-item"><div class="impact-num">0</div><div class="impact-label">Discrimination — Caste, Creed or Religion</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="activities" class="section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">What We Do</span>
+      <h2>Activities & <strong>Focus Areas</strong></h2>
+      <div class="divider center"></div>
+      <p style="max-width:700px;margin:0 auto;color:var(--ink-lt);font-size:1.05rem;">The Trust combines its core value system with real on-ground service, creating a balanced identity of heritage and action.</p>
+    </div>
+    <div class="activities-grid">
+      <div class="activity-card fade-in">
+        <span class="card-num">01</span><div class="card-icon">📚</div><div class="card-title">Education & Skill Development</div><div class="card-desc">Promoting quality education and skill development among youth — enhancing learning opportunities, academic support, and building capacities that empower individuals to become self-reliant.</div><div class="card-shloka">विद्या ददाति विनयं, विनयाद् याति पात्रताम्।<br>पात्रत्वात् धनमाप्नोति, धनात् धर्मं ततः सुखम्॥</div>
+      </div>
+      <div class="activity-card fade-in fade-in-delay-1">
+        <span class="card-num">02</span><div class="card-icon">🏥</div><div class="card-title">Healthcare & Well-being</div><div class="card-desc">Improving community health through awareness programs, preventive care initiatives, and promotion of physical and mental well-being for a healthier society.</div><div class="card-shloka">आरोग्यं परमं भाग्यं, स्वास्थ्यं सर्वार्थसाधनम्।</div>
+      </div>
+      <div class="activity-card fade-in fade-in-delay-2">
+        <span class="card-num">03</span><div class="card-icon">🌾</div><div class="card-title">Rural Development & Livelihood</div><div class="card-desc">Strengthening livelihoods, promoting self-sufficiency, and improving socio-economic conditions of rural communities across Himachal Pradesh.</div><div class="card-shloka">कृषिर्वलम् — Agriculture is the strength of the nation.</div>
+      </div>
+      <div class="activity-card fade-in fade-in-delay-1">
+        <span class="card-num">04</span><div class="card-icon">🌿</div><div class="card-title">Environmental Conservation</div><div class="card-desc">Promoting environmental awareness, plantation drives, water conservation, and responsible use of natural resources — emphasizing harmony with nature.</div><div class="card-shloka">माता भूमिः पुत्रोऽहं पृथिव्याः</div>
+      </div>
+      <div class="activity-card fade-in fade-in-delay-2">
+        <span class="card-num">05</span><div class="card-icon">🐄</div><div class="card-title">Animal Welfare & Gaushala</div><div class="card-desc">Supporting protection and care of animals, especially indigenous cattle, recognizing their cultural, ecological, and economic significance in Indian society.</div><div class="card-shloka">गावो विश्वस्य मातरः — Cows are the mothers of the world.</div>
+      </div>
+      <div class="activity-card fade-in fade-in-delay-1">
+        <span class="card-num">06</span><div class="card-icon">🤝</div><div class="card-title">Social Welfare & Community</div><div class="card-desc">Working for the upliftment of underprivileged and marginalized sections of society — women, children, elderly, and differently-abled — promoting equality and dignity.</div><div class="card-shloka">परहितार्थं इदं शरीरम्</div>
+      </div>
+      <div class="activity-card fade-in fade-in-delay-2">
+        <span class="card-num">07</span><div class="card-icon">🇮🇳</div><div class="card-title">Youth Empowerment</div><div class="card-desc">Special emphasis on empowering youth through physical, intellectual, and moral development — recognizing them as the foundation of a strong and self-reliant nation.</div><div class="card-shloka">उत्तिष्ठत जाग्रत प्राप्य वरान्निबोधत</div>
+      </div>
+      <div class="activity-card fade-in fade-in-delay-3">
+        <span class="card-num">08</span><div class="card-icon">🎭</div><div class="card-title">Culture & Relief</div><div class="card-desc">Organizing social and cultural community programs promoting harmony, cultural values, and undertaking relief activities during natural calamities and emergencies.</div><div class="card-shloka">निःस्वार्थ सेवा — Selfless Service Always</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== MEDIA ===== -->
-<section id="media">
+<section class="banner">
+  <div class="container">
+    <h2>A Legacy of Seva</h2>
+    <p>Inspired by the ideals of Thakur Ram Singh Ji, strengthened by community action, and expressed through visible service on the ground.</p>
+  </div>
+</section>
+
+<section class="media">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Recent Work</span>
+      <h2>Documented <strong>Activities</strong></h2>
+      <div class="divider center"></div>
+    </div>
+    <div class="media-grid">
+      <div class="media-card fade-in">
+        <div class="media-card-type">Community Support</div>
+        <h3>Relief Work and Local Outreach</h3>
+        <p>Images from support distribution, community coordination, and direct assistance initiatives carried out across rural locations.</p>
+        <div class="media-card-footer"><span>Field documentation</span><a href="gallery.html">View gallery →</a></div>
+      </div>
+      <div class="media-card fade-in fade-in-delay-1">
+        <div class="media-card-type">Education & Youth</div>
+        <h3>Learning, Training, and Fitness Activities</h3>
+        <p>Photos from youth-focused events, yoga sessions, physical training, and educational support environments.</p>
+        <div class="media-card-footer"><span>Field documentation</span><a href="activities.html">See details →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Gallery</span>
+      <h2>Recent <strong>Activities</strong></h2>
+      <div class="divider center"></div>
+      <p style="max-width:700px;margin:0 auto;color:var(--ink-lt);font-size:1.05rem;">A full visual archive of relief distribution, community gatherings, plantation efforts and youth work.</p>
+    </div>
+    <div class="gallery-grid">
+      <img class="fade-in" src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.17_PM.jpeg" alt="Trust activity photo"><img class="fade-in" src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.19_PM.jpeg" alt="Trust activity photo"><img class="fade-in" src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.22_PM_(1).jpeg" alt="Trust activity photo"><img class="fade-in" src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.22_PM.jpeg" alt="Trust activity photo"><img class="fade-in" src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.24_PM.jpeg" alt="Trust activity photo"><img class="fade-in" src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.32_PM_(1).jpeg" alt="Trust activity photo"><img class="fade-in" src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.32_PM.jpeg" alt="Trust activity photo"><img class="fade-in" src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.33_PM.jpeg" alt="Trust activity photo"><img class="fade-in" src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.36_PM_(1).jpeg" alt="Trust activity photo"><img class="fade-in" src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.36_PM.jpeg" alt="Trust activity photo"><img class="fade-in" src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.39_PM.jpeg" alt="Trust activity photo">
+  </div>
+</section>
+
+<section class="media">
   <div class="container">
     <div class="section-header fade-in">
       <span class="section-label">Media & Society</span>
@@ -1287,70 +398,43 @@ body::before {
         <div class="media-card-type">Press Release</div>
         <h3>Trust Launches New Education Initiative for Rural Youth in Himachal Pradesh</h3>
         <p>The Thakur Ram Singh Smriti Nyas announces a comprehensive education support program aimed at providing resources, mentorship, and scholarship opportunities to students in remote areas of Himachal Pradesh.</p>
-        <div class="media-card-footer">
-          <span>May 2025</span>
-          <a href="#">Read More →</a>
-        </div>
+        <div class="media-card-footer"><span>May 2025</span><a href="#">Read More →</a></div>
       </div>
       <div class="media-card fade-in fade-in-delay-1">
         <div class="media-card-type">Press Release</div>
         <h3>Annual Health Camp Reaches 500+ Beneficiaries Across Three Districts</h3>
         <p>In continuation of its healthcare mission, the Trust organized a multi-day health camp providing free medical consultations, medicines, and wellness guidance to communities in need.</p>
-        <div class="media-card-footer">
-          <span>March 2025</span>
-          <a href="#">Read More →</a>
-        </div>
+        <div class="media-card-footer"><span>March 2025</span><a href="#">Read More →</a></div>
       </div>
       <div class="media-card fade-in">
         <div class="media-card-type">Blog</div>
         <h3>The Philosophy of Seva: Why Selfless Service Is the Foundation of Nation-Building</h3>
         <p>Exploring the ancient Bharatiya principle of Seva and how it continues to guide the Trust's work — from rural development to youth empowerment — in the contemporary context of Himachal Pradesh.</p>
-        <div class="media-card-footer">
-          <span>April 2025</span>
-          <a href="#">Read More →</a>
-        </div>
+        <div class="media-card-footer"><span>April 2025</span><a href="#">Read More →</a></div>
       </div>
       <div class="media-card fade-in fade-in-delay-1">
         <div class="media-card-type">Blog</div>
         <h3>माता भूमिः: The Trust's Environmental Conservation Journey in the Himalayan Foothills</h3>
         <p>A reflection on the Trust's plantation drives, water conservation efforts, and community awareness programs — and what it means to truly honor the earth as our mother in the mountains of Himachal.</p>
-        <div class="media-card-footer">
-          <span>February 2025</span>
-          <a href="#">Read More →</a>
-        </div>
+        <div class="media-card-footer"><span>February 2025</span><a href="#">Read More →</a></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== CONTACT ===== -->
-<section id="contact">
+<section id="contact" class="contact-shell">
   <div class="container">
     <div class="contact-grid">
       <div class="contact-left fade-in">
         <span class="section-label" style="color:var(--gold);">Get in Touch</span>
         <h2>Connect With <em>the Trust</em></h2>
         <div class="divider"></div>
-        <p>
-          Whether you wish to support our initiatives, collaborate on a program, or simply learn more about our work — we welcome every conversation rooted in the spirit of seva.
-        </p>
+        <p>Whether you wish to support our initiatives, collaborate on a program, or simply learn more about our work — we welcome every conversation rooted in the spirit of seva.</p>
         <div class="contact-info">
-          <div class="info-row">
-            <span class="info-icon">📍</span>
-            <span>Himachal Pradesh, India</span>
-          </div>
-          <div class="info-row">
-            <span class="info-icon">✉️</span>
-            <span>info@trsmnyas.org</span>
-          </div>
-          <div class="info-row">
-            <span class="info-icon">📞</span>
-            <span>Contact via official channels</span>
-          </div>
-          <div class="info-row">
-            <span class="info-icon">🪔</span>
-            <span style="font-family:var(--ff-devan);color:var(--gold);font-size:1.05rem;">सेवा परमो धर्मः</span>
-          </div>
+          <div class="info-row"><span class="info-icon">📍</span><span>Himachal Pradesh, India</span></div>
+          <div class="info-row"><span class="info-icon">✉️</span><span>info@trsmnyas.org</span></div>
+          <div class="info-row"><span class="info-icon">📞</span><span>Contact via official channels</span></div>
+          <div class="info-row"><span class="info-icon">🪔</span><span style="font-family:var(--ff-devan);color:var(--gold);font-size:1.05rem;">सेवा परमो धर्मः</span></div>
         </div>
       </div>
       <div class="contact-form fade-in fade-in-delay-1">
@@ -1376,66 +460,43 @@ body::before {
             <option>Social Welfare</option>
             <option>Youth Empowerment</option>
             <option>Donation / Support</option>
-            <option>General Enquiry</option>
           </select>
         </div>
         <div class="form-group">
           <label>Message</label>
           <textarea placeholder="Share how you'd like to connect or contribute..."></textarea>
         </div>
-        <button class="btn-submit" onclick="handleFormSubmit()">Send Message →</button>
+        <button class="btn-submit">Send Message →</button>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div class="footer-logo-text">
-        <strong>Thakur Ram Singh Smriti Nyas</strong> — Himachal Pradesh
-      </div>
-      <div class="footer-shloka">सेवा परमो धर्मः</div>
-      <div class="footer-copy">© 2025 Thakur Ram Singh Smriti Nyas. All rights reserved.</div>
-    </div>
+
+    
+<div class="footer-columns">
+  <div class="footer-panel">
+    <h4>Contact Details</h4>
+    <p><strong>Address:</strong> Himachal Pradesh, India</p>
+    <p><strong>Email:</strong> info@trsmnyas.org</p>
+    <p><strong>Phone:</strong> Contact via official channels</p>
+  </div>
+  <div class="footer-panel">
+    <h4>Support & Collaboration</h4>
+    <p>For volunteering, donations, partnerships, and local initiative support, please connect through the official trust contact channels.</p>
+  </div>
+  <div class="footer-panel">
+    <h4>Motto</h4>
+    <p style="font-family:var(--ff-devan); color:var(--gold-lt);">सेवा परमो धर्मः</p>
+    <p>Service is the highest dharma.</p>
+  </div>
+</div>
+<div class="footer-bottom">
+  <div class="footer-logo-text"><strong>Thakur Ram Singh Smriti Nyas</strong> • Himachal Pradesh</div>
+  <div class="footer-copy">© 2025 • Heritage editorial design with real trust imagery</div>
+  <div class="footer-shloka">सेवा परमो धर्मः</div>
+</div>
+
   </div>
 </section>
 
-<script>
-// ===== NAV SCROLL =====
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 60);
-});
-
-// ===== MOBILE MENU =====
-function toggleMenu() {
-  document.getElementById('mobileMenu').classList.toggle('open');
-}
-
-// ===== INTERSECTION OBSERVER for fade-in =====
-const faders = document.querySelectorAll('.fade-in');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-}, { threshold: 0.12 });
-faders.forEach(f => observer.observe(f));
-
-// ===== FORM SUBMIT =====
-function handleFormSubmit() {
-  const btn = document.querySelector('.btn-submit');
-  btn.textContent = 'Message Sent ✓';
-  btn.style.background = 'var(--forest)';
-  setTimeout(() => {
-    btn.textContent = 'Send Message →';
-    btn.style.background = '';
-  }, 3000);
-}
-
-// ===== SMOOTH ANCHOR SCROLL =====
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
-</script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
