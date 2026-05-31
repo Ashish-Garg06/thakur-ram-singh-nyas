@@ -10,11 +10,16 @@
 </head>
 <body>
 
+<a href="donate.html" class="donate-float"><span class="df-icon">🪷</span> Donate Now</a>
 
 <nav id="navbar">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <div class="nav-logo-emblem">🪔</div>
+      <div class="nav-logo-emblem">
+        <img src="assets/images/trust-logo.png"
+            alt="Thakur Ram Singh Smriti Nyas Emblem">
+      </div>
+
       <div class="nav-logo-text">
         <span>Thakur Ram Singh Smriti Nyas</span>
         <span>Himachal Pradesh • Charitable Trust</span>
@@ -24,22 +29,24 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="activities.html">Activities</a></li>
-      <li><a href="founder.html">Founder</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
       <li><a href="media.html">Media</a></li>
-      <li><a href="contact.html" class="nav-cta">Connect</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="join.html">Join Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="donate.html" class="nav-donate-btn">Donate</a></li>
     </ul>
-    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></span></div>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html" onclick="toggleMenu()">Home</a>
   <a href="about.html" onclick="toggleMenu()">About</a>
   <a href="activities.html" onclick="toggleMenu()">Activities</a>
-  <a href="founder.html" onclick="toggleMenu()">Founder</a>
-  <a href="gallery.html" onclick="toggleMenu()">Gallery</a>
   <a href="media.html" onclick="toggleMenu()">Media</a>
-  <a href="contact.html" onclick="toggleMenu()">Connect</a>
+  <a href="gallery.html" onclick="toggleMenu()">Gallery</a>
+  <a href="join.html" onclick="toggleMenu()">Join Us</a>
+  <a href="contact.html" onclick="toggleMenu()">Contact</a>
+  <a href="donate.html" onclick="toggleMenu()" style="color:var(--rose);font-weight:700;">Donate →</a>
 </div>
 
 <div class="page">
@@ -47,39 +54,129 @@
   <div class="container">
     <div class="section-header fade-in">
       <span class="section-label">Media & Society</span>
-      <h2>Press Releases <strong>&amp; Blogs</strong></h2>
+      <h2>Press Releases <strong>&amp; Our Views</strong></h2>
       <div class="divider center"></div>
+      <p style="color:var(--ink-lt);max-width:580px;margin:0 auto;">Stay informed about the Trust's work and read our perspectives on service, culture, and nation-building.</p>
     </div>
-    <div class="media-grid">
-      <div class="media-card fade-in">
-        <div class="media-card-type">Press Release</div>
-        <h3>Trust Launches New Education Initiative for Rural Youth in Himachal Pradesh</h3>
-        <p>The Thakur Ram Singh Smriti Nyas announces a comprehensive education support program aimed at providing resources, mentorship, and scholarship opportunities to students in remote areas of Himachal Pradesh.</p>
-        <div class="media-card-footer"><span>May 2025</span><a href="#">Read More →</a></div>
-      </div>
-      <div class="media-card fade-in fade-in-delay-1">
-        <div class="media-card-type">Press Release</div>
-        <h3>Annual Health Camp Reaches 500+ Beneficiaries Across Three Districts</h3>
-        <p>In continuation of its healthcare mission, the Trust organized a multi-day health camp providing free medical consultations, medicines, and wellness guidance to communities in need.</p>
-        <div class="media-card-footer"><span>March 2025</span><a href="#">Read More →</a></div>
-      </div>
-      <div class="media-card fade-in">
-        <div class="media-card-type">Blog</div>
-        <h3>The Philosophy of Seva: Why Selfless Service Is the Foundation of Nation-Building</h3>
-        <p>Exploring the ancient Bharatiya principle of Seva and how it continues to guide the Trust's work — from rural development to youth empowerment — in the contemporary context of Himachal Pradesh.</p>
-        <div class="media-card-footer"><span>April 2025</span><a href="#">Read More →</a></div>
-      </div>
-      <div class="media-card fade-in fade-in-delay-1">
-        <div class="media-card-type">Blog</div>
-        <h3>माता भूमिः: The Trust's Environmental Conservation Journey in the Himalayan Foothills</h3>
-        <p>A reflection on the Trust's plantation drives, water conservation efforts, and community awareness programs — and what it means to truly honor the earth as our mother in the mountains of Himachal.</p>
-        <div class="media-card-footer"><span>February 2025</span><a href="#">Read More →</a></div>
+
+    <!-- Tab switcher -->
+    <div class="media-tabs">
+      <button class="media-tab active" onclick="showMedia('press',this)">📰 Press Releases</button>
+      <button class="media-tab" onclick="showMedia('views',this)">✍️ Our Views</button>
+    </div>
+
+    <!-- ══ Press Releases ══ -->
+    <div class="media-panel active" id="press">
+      <div class="media-grid">
+        <div class="media-card fade-in">
+          <div class="media-card-type">Press Release</div>
+          <h3>Trust Launches Education Initiative for Rural Youth in Himachal Pradesh</h3>
+          <p>The Thakur Ram Singh Smriti Nyas announces a comprehensive education support program — providing resources, mentorship, and scholarship opportunities to students in remote areas of Himachal Pradesh.</p>
+          <div class="media-card-footer"><span>May 2025</span><a href="#">Read More →</a></div>
+        </div>
+        <div class="media-card fade-in fade-in-delay-1">
+          <div class="media-card-type">Press Release</div>
+          <h3>Annual Health Camp Reaches 500+ Beneficiaries Across Three Districts</h3>
+          <p>In continuation of its healthcare mission, the Trust organized a multi-day health camp providing free medical consultations, medicines, and wellness guidance to communities in need.</p>
+          <div class="media-card-footer"><span>March 2025</span><a href="#">Read More →</a></div>
+        </div>
+        <div class="media-card fade-in">
+          <div class="media-card-type">Press Release</div>
+          <h3>Vasant Mahotsav Plantation Drive — Community Response Overwhelming</h3>
+          <p>Hundreds of saplings planted across villages in Hamirpur as part of the Trust's spring plantation initiative — a celebration of environmental responsibility and cultural tradition.</p>
+          <div class="media-card-footer"><span>February 2025</span><a href="#">Read More →</a></div>
+        </div>
+        <div class="media-card fade-in fade-in-delay-1">
+          <div class="media-card-type">Press Release</div>
+          <h3>Youth Empowerment Camp Successfully Concludes in Hamirpur</h3>
+          <p>A residential youth development camp emphasizing physical training, yoga, and civic values concluded with participation from youth across three districts of Himachal Pradesh.</p>
+          <div class="media-card-footer"><span>January 2025</span><a href="#">Read More →</a></div>
+        </div>
+        <div class="media-card fade-in">
+          <div class="media-card-type">Press Release</div>
+          <h3>Relief Aid Distributed to Flood-Affected Families in Himachal</h3>
+          <p>The Trust coordinated direct relief — essentials, food, and support — to families displaced by floods, demonstrating rapid community response in times of emergency.</p>
+          <div class="media-card-footer"><span>August 2024</span><a href="#">Read More →</a></div>
+        </div>
+        <div class="media-card fade-in fade-in-delay-1">
+          <div class="media-card-type">Press Release</div>
+          <h3>Free Health Camp Conducted in Rural Villages of Hamirpur</h3>
+          <p>Eye checkup, blood pressure monitoring, and diabetes screening organized for senior citizens — with medicines and consultations provided free of charge by volunteer medical teams.</p>
+          <div class="media-card-footer"><span>July 2024</span><a href="#">Read More →</a></div>
+        </div>
       </div>
     </div>
+
+    <!-- ══ Our Views ══ -->
+    <div class="media-panel" id="views">
+      <div class="media-grid">
+        <div class="media-card fade-in">
+          <div class="media-card-type">Our Views</div>
+          <h3>The Philosophy of Seva: Why Selfless Service Is the Foundation of Nation-Building</h3>
+          <p>Exploring the ancient Bharatiya principle of Seva and how it continues to guide the Trust's work — from rural development to youth empowerment — in the contemporary context of Himachal Pradesh.</p>
+          <div class="media-card-footer"><span>April 2025</span><a href="#">Read More →</a></div>
+        </div>
+        <div class="media-card fade-in fade-in-delay-1">
+          <div class="media-card-type">Our Views</div>
+          <h3>माता भूमिः: Our Environmental Conservation Journey in the Himalayan Foothills</h3>
+          <p>A reflection on the Trust's plantation drives, water conservation efforts, and community awareness programs — and what it means to truly honor the earth as our mother in the mountains of Himachal.</p>
+          <div class="media-card-footer"><span>February 2025</span><a href="#">Read More →</a></div>
+        </div>
+        <div class="media-card fade-in">
+          <div class="media-card-type">Our Views</div>
+          <h3>Why Historical Consciousness Matters: Remembering Thakur Ram Singh Ji's Legacy</h3>
+          <p>A tribute to the founder's lifelong mission to restore authentic Bharatiya history — and why his work through Akhil Bharatiya Itihas Sankalan Yojana remains relevant today.</p>
+          <div class="media-card-footer"><span>September 2024</span><a href="#">Read More →</a></div>
+        </div>
+        <div class="media-card fade-in fade-in-delay-1">
+          <div class="media-card-type">Our Views</div>
+          <h3>Youth, Discipline, and the Future of Bharat: A Perspective from the Trust</h3>
+          <p>Our belief that a disciplined, culturally rooted, and socially responsible youth is the foundation of a strong nation — and what our programs seek to cultivate in young people.</p>
+          <div class="media-card-footer"><span>June 2024</span><a href="#">Read More →</a></div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
+
+<!-- Footer -->
+<div class="contact-shell" style="padding:3rem 0 2rem;">
+  <div class="container">
+    <div class="footer-columns">
+      <div class="footer-panel">
+        <h4>Contact</h4>
+        <p><strong>Address:</strong> Himachal Pradesh, India</p>
+        <p><strong>Email:</strong> info@trsmnyas.org</p>
+      </div>
+      <div class="footer-panel">
+        <h4>Quick Links</h4>
+        <p><a href="about.html">About</a> &nbsp;|&nbsp; <a href="activities.html">Activities</a> &nbsp;|&nbsp; <a href="gallery.html">Gallery</a></p>
+        <p><a href="join.html">Join Us</a> &nbsp;|&nbsp; <a href="contact.html">Contact</a> &nbsp;|&nbsp; <a href="donate.html">Donate</a></p>
+      </div>
+      <div class="footer-panel">
+        <h4>Motto</h4>
+        <p style="font-family:var(--ff-devan); color:var(--rose);font-size:1.1rem;">सेवा परमो धर्मः</p>
+        <p>Service is the highest dharma.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-logo-text"><strong>Thakur Ram Singh Smriti Nyas</strong> • Himachal Pradesh</div>
+      <div class="footer-copy">© 2025 Thakur Ram Singh Smriti Nyas. All rights reserved.</div>
+      <div class="footer-shloka">सेवा परमो धर्मः</div>
+    </div>
+  </div>
 </div>
 
+</div><!-- .page -->
 <script src="assets/js/main.js"></script>
+<script>
+function showMedia(id, btn) {
+  document.querySelectorAll('.media-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.media-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
 </body>
 </html>

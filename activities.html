@@ -10,11 +10,16 @@
 </head>
 <body>
 
+<a href="donate.html" class="donate-float"><span class="df-icon">🪷</span> Donate Now</a>
 
 <nav id="navbar">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <div class="nav-logo-emblem">🪔</div>
+      <div class="nav-logo-emblem">
+        <img src="assets/images/trust-logo.png"
+            alt="Thakur Ram Singh Smriti Nyas Emblem">
+      </div>
+
       <div class="nav-logo-text">
         <span>Thakur Ram Singh Smriti Nyas</span>
         <span>Himachal Pradesh • Charitable Trust</span>
@@ -24,87 +29,278 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="activities.html">Activities</a></li>
-      <li><a href="founder.html">Founder</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
       <li><a href="media.html">Media</a></li>
-      <li><a href="contact.html" class="nav-cta">Connect</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="join.html">Join Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="donate.html" class="nav-donate-btn">Donate</a></li>
     </ul>
-    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></span></div>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html" onclick="toggleMenu()">Home</a>
   <a href="about.html" onclick="toggleMenu()">About</a>
   <a href="activities.html" onclick="toggleMenu()">Activities</a>
-  <a href="founder.html" onclick="toggleMenu()">Founder</a>
-  <a href="gallery.html" onclick="toggleMenu()">Gallery</a>
   <a href="media.html" onclick="toggleMenu()">Media</a>
-  <a href="contact.html" onclick="toggleMenu()">Connect</a>
+  <a href="gallery.html" onclick="toggleMenu()">Gallery</a>
+  <a href="join.html" onclick="toggleMenu()">Join Us</a>
+  <a href="contact.html" onclick="toggleMenu()">Contact</a>
+  <a href="donate.html" onclick="toggleMenu()" style="color:var(--rose);font-weight:700;">Donate →</a>
 </div>
 
 <div class="page">
 <section class="section">
   <div class="container">
-    <div class="page-title">Activities & Focus Areas</div>
-    <p class="page-lead">A detailed overview of the Trust’s functional areas.</p>
+    <div class="page-title">Activities</div>
+    <p class="page-lead">Detailed year-wise documentation of the Trust's major programmes during 2024–25.</p>
+
     <div class="gallery-tags" style="margin-top:2rem;">
-      <span class="gallery-tag">Education</span>
-      <span class="gallery-tag">Healthcare</span>
-      <span class="gallery-tag">Rural Development</span>
+      <span class="gallery-tag">Social Harmony</span>
+      <span class="gallery-tag">Yoga & Health</span>
       <span class="gallery-tag">Environment</span>
-      <span class="gallery-tag">Animal Welfare</span>
-      <span class="gallery-tag">Youth Empowerment</span>
       <span class="gallery-tag">Relief Work</span>
+      <span class="gallery-tag">Youth Development</span>
+      <span class="gallery-tag">Animal Welfare</span>
+      <span class="gallery-tag">Women Empowerment</span>
     </div>
-    <div class="activities-grid" style="margin-top:3rem;">
-      <div class="activity-card fade-in">
-        <span class="card-num">01</span><div class="card-icon">📚</div><div class="card-title">Education & Skill Development</div><div class="card-desc">Promoting quality education and skill development among youth — enhancing learning opportunities, academic support, and building capacities that empower individuals to become self-reliant.</div><div class="card-shloka">विद्या ददाति विनयं, विनयाद् याति पात्रताम्।<br>पात्रत्वात् धनमाप्नोति, धनात् धर्मं ततः सुखम्॥</div>
+
+    <div class="year-tabs" style="margin-top:2.5rem;">
+      <button class="year-tab active" onclick="showYear('y2025',this)">2025</button>
+      <button class="year-tab" onclick="showYear('y2024',this)">2024</button>
+    </div>
+
+    <div class="year-panel active" id="y2025">
+      <div class="year-heading">Activities in <em>2025</em></div>
+      <div class="activities-grid">
+        <div class="activity-card fade-in">
+          <span class="card-num">01</span>
+          <div class="card-icon">🧭</div>
+          <div class="card-meta">2–5 January 2025 • Tipper</div>
+          <div class="card-title">Three-Day Personality Development Camp for Youth</div>
+          <div class="card-desc">A residential-style camp for 72 students from colleges and universities across Himachal Pradesh, focused on communication, confidence building, leadership, discipline, self-awareness and value-based learning.</div>
+          <div class="card-shloka">व्यक्तित्व निर्माणं, राष्ट्रनिर्माणस्य आधारः।</div>
+        </div>
+        <div class="activity-card fade-in fade-in-delay-1">
+          <span class="card-num">02</span>
+          <div class="card-icon">🏏</div>
+          <div class="card-meta">12 January 2025 • National Youth Day</div>
+          <div class="card-title">Kabaddi Competition on National Youth Day</div>
+          <div class="card-desc">A vibrant kabaddi competition with 13 participating teams, encouraging physical fitness, teamwork, discipline and healthy competitive spirit among the local youth.</div>
+          <div class="card-shloka">क्रीडा बलं, क्रीडा अनुशासनं च वर्धयति।</div>
+        </div>
+        <div class="activity-card fade-in fade-in-delay-2">
+          <span class="card-num">03</span>
+          <div class="card-icon">🩺</div>
+          <div class="card-meta">22 January 2025 • Lalit Palace, Hamirpur</div>
+          <div class="card-title">Seminar on Health Challenges and Indian Life Style</div>
+          <div class="card-desc">An awareness seminar led by Sh. Sanjeevan Kumar Ji, highlighting preventive healthcare, lifestyle-related health challenges and the continuing relevance of Indian wellness traditions.</div>
+          <div class="card-shloka">आरोग्यं परमं भाग्यं, स्वास्थ्यं सर्वार्थसाधनम्।</div>
+        </div>
+        <div class="activity-card fade-in fade-in-delay-1">
+          <span class="card-num">04</span>
+          <div class="card-icon">🤼</div>
+          <div class="card-meta">29 January 2025 • Village Phahal</div>
+          <div class="card-title">Promotion of Traditional Rural Sports – Dangal (Chhinj)</div>
+          <div class="card-desc">The Trust supported a traditional wrestling event with ₹21,000, helping preserve rural sporting culture and encourage community participation rooted in Himachali heritage.</div>
+          <div class="card-shloka">परम्परा रक्षणं, संस्कृतिसंवर्धनं च।</div>
+        </div>
+        <div class="activity-card fade-in fade-in-delay-2">
+          <span class="card-num">05</span>
+          <div class="card-icon">🩸</div>
+          <div class="card-meta">2 February 2025 • Krishan Gopal Gaushala</div>
+          <div class="card-title">Blood Donation-cum-Cow Health Camp</div>
+          <div class="card-desc">A joint welfare initiative with medical and veterinary partners, resulting in 32 units of blood donated and treatment provided to 47 cows with active community participation.</div>
+          <div class="card-shloka">जीवसेवा, गोसेवा, समाजसेवा।</div>
+        </div>
+        <div class="activity-card fade-in fade-in-delay-3">
+          <span class="card-num">06</span>
+          <div class="card-icon">👩‍⚕️</div>
+          <div class="card-meta">7 February 2025 • Trisha College of Education</div>
+          <div class="card-title">Seminar on Women Empowerment, Health & Hygiene</div>
+          <div class="card-desc">A collaborative seminar with the District Health & Family Welfare Department to build awareness around women’s health, hygiene, preventive care and empowerment through education.</div>
+          <div class="card-shloka">नारी सशक्तीकरणं, समाजसबलतायाः आधारः।</div>
+        </div>
       </div>
-      <div class="activity-card fade-in fade-in-delay-1">
-        <span class="card-num">02</span><div class="card-icon">🏥</div><div class="card-title">Healthcare & Well-being</div><div class="card-desc">Improving community health through awareness programs, preventive care initiatives, and promotion of physical and mental well-being for a healthier society.</div><div class="card-shloka">आरोग्यं परमं भाग्यं, स्वास्थ्यं सर्वार्थसाधनम्।</div>
-      </div>
-      <div class="activity-card fade-in fade-in-delay-2">
-        <span class="card-num">03</span><div class="card-icon">🌾</div><div class="card-title">Rural Development & Livelihood</div><div class="card-desc">Strengthening livelihoods, promoting self-sufficiency, and improving socio-economic conditions of rural communities across Himachal Pradesh.</div><div class="card-shloka">कृषिर्वलम् — Agriculture is the strength of the nation.</div>
-      </div>
-      <div class="activity-card fade-in fade-in-delay-1">
-        <span class="card-num">04</span><div class="card-icon">🌿</div><div class="card-title">Environmental Conservation</div><div class="card-desc">Promoting environmental awareness, plantation drives, water conservation, and responsible use of natural resources — emphasizing harmony with nature.</div><div class="card-shloka">माता भूमिः पुत्रोऽहं पृथिव्याः</div>
-      </div>
-      <div class="activity-card fade-in fade-in-delay-2">
-        <span class="card-num">05</span><div class="card-icon">🐄</div><div class="card-title">Animal Welfare & Gaushala</div><div class="card-desc">Supporting protection and care of animals, especially indigenous cattle, recognizing their cultural, ecological, and economic significance in Indian society.</div><div class="card-shloka">गावो विश्वस्य मातरः — Cows are the mothers of the world.</div>
-      </div>
-      <div class="activity-card fade-in fade-in-delay-1">
-        <span class="card-num">06</span><div class="card-icon">🤝</div><div class="card-title">Social Welfare & Community</div><div class="card-desc">Working for the upliftment of underprivileged and marginalized sections of society — women, children, elderly, and differently-abled — promoting equality and dignity.</div><div class="card-shloka">परहितार्थं इदं शरीरम्</div>
-      </div>
-      <div class="activity-card fade-in fade-in-delay-2">
-        <span class="card-num">07</span><div class="card-icon">🇮🇳</div><div class="card-title">Youth Empowerment</div><div class="card-desc">Special emphasis on empowering youth through physical, intellectual, and moral development — recognizing them as the foundation of a strong and self-reliant nation.</div><div class="card-shloka">उत्तिष्ठत जाग्रत प्राप्य वरान्निबोधत</div>
-      </div>
-      <div class="activity-card fade-in fade-in-delay-3">
-        <span class="card-num">08</span><div class="card-icon">🎭</div><div class="card-title">Culture & Relief</div><div class="card-desc">Organizing social and cultural community programs promoting harmony, cultural values, and undertaking relief activities during natural calamities and emergencies.</div><div class="card-shloka">निःस्वार्थ सेवा — Selfless Service Always</div>
+
+      <div style="margin-top:3rem;">
+        <div class="section-header fade-in">
+          <span class="section-label">2025 — Field Documentation</span>
+          <h2>From the <strong>Field</strong></h2>
+          <div class="divider center"></div>
+        </div>
+        <div class="photo-grid">
+          <figure class="photo-card fade-in">
+            <img src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.17_PM.jpeg" alt="Tree plantation drive in a hillside area">
+            <figcaption>Tree plantation drive on a hillside patch, where volunteers worked to restore greenery with saplings.</figcaption>
+          </figure>
+          <figure class="photo-card fade-in">
+            <img src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.19_PM.jpeg" alt="Outdoor yoga and fitness session">
+            <figcaption>Guided yoga and fitness practice on the school ground, reflecting the Trust’s health and wellness focus.</figcaption>
+          </figure>
+          <figure class="photo-card fade-in">
+            <img src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.22_PM.jpeg" alt="Youth group participating in physical training">
+            <figcaption>Large youth participation on the field, showing discipline, teamwork and active engagement in physical training.</figcaption>
+          </figure>
+          <figure class="photo-card fade-in">
+            <img src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.22_PM_(1).jpeg" alt="Sapling distribution and community participation">
+            <figcaption>Community plantation outreach with saplings distributed and planted at a common gathering point.</figcaption>
+          </figure>
+          <figure class="photo-card fade-in">
+            <img src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.24_PM.jpeg" alt="Newspaper coverage of flood relief assistance">
+            <figcaption>Press coverage highlighting relief and assistance distributed to disaster-affected families.</figcaption>
+          </figure>
+          <figure class="photo-card fade-in">
+            <img src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.32_PM_(1).jpeg" alt="Community support handover at a village venue">
+            <figcaption>Community support handover at a village venue, showing assistance being shared in a respectful and direct way.</figcaption>
+          </figure>
+        </div>
       </div>
     </div>
+
+    <div class="year-panel" id="y2024">
+      <div class="year-heading">Activities in <em>2024</em></div>
+      <div class="activities-grid">
+        <div class="activity-card fade-in">
+          <span class="card-num">01</span>
+          <div class="card-icon">🤝</div>
+          <div class="card-meta">12 May 2024 • Geeta Bhawan, Nadaun</div>
+          <div class="card-title">Seminar on “Samajik Samrasta” (Social Harmony)</div>
+          <div class="card-desc">A seminar promoting social harmony, mutual respect and inclusive community development, encouraging unity, equality and collective responsibility among all sections of society.</div>
+          <div class="card-shloka">समानता, सौहार्दं, सहयोगश्च समाजस्य बलम्।</div>
+        </div>
+        <div class="activity-card fade-in fade-in-delay-1">
+          <span class="card-num">02</span>
+          <div class="card-icon">🧘</div>
+          <div class="card-meta">21 June 2024 • Trust Headquarters, Tipper</div>
+          <div class="card-title">Celebration of International Yoga Day</div>
+          <div class="card-desc">A community yoga programme and awareness session highlighting physical fitness, mental well-being, emotional balance and the daily relevance of yoga in modern life.</div>
+          <div class="card-shloka">योगः चित्तवृत्तिनिरोधः।</div>
+        </div>
+        <div class="activity-card fade-in fade-in-delay-2">
+          <span class="card-num">03</span>
+          <div class="card-icon">🌱</div>
+          <div class="card-meta">July 2024</div>
+          <div class="card-title">Tree Plantation Drive</div>
+          <div class="card-desc">A plantation initiative featuring herbal, medicinal and indigenous species, strengthening environmental responsibility and awareness around sustainable living.</div>
+          <div class="card-shloka">माता भूमिः पुत्रोऽहं पृथिव्याः।</div>
+        </div>
+        <div class="activity-card fade-in fade-in-delay-1">
+          <span class="card-num">04</span>
+          <div class="card-icon">🇮🇳</div>
+          <div class="card-meta">15 August 2024 • Trust Headquarters, Tipper</div>
+          <div class="card-title">Independence Day Celebration</div>
+          <div class="card-desc">A patriotic gathering to honour freedom fighters and inspire unity, national pride and social responsibility among trust members and the local community.</div>
+          <div class="card-shloka">वन्दे मातरम्, जयतु भारतम्।</div>
+        </div>
+        <div class="activity-card fade-in fade-in-delay-2">
+          <span class="card-num">05</span>
+          <div class="card-icon">🛟</div>
+          <div class="card-meta">2024–25 • Multiple districts of Himachal Pradesh</div>
+          <div class="card-title">Flood Relief and Assistance to Disaster-Affected Families</div>
+          <div class="card-desc">Rapid humanitarian relief provided to flood-affected families, with total financial assistance of ₹5,35,000 distributed among nearly 20 needy households across affected districts.</div>
+          <div class="card-shloka">आपत्काले सहाय्यं, मानवधर्मस्य शोभा।</div>
+        </div>
+        <div class="activity-card fade-in fade-in-delay-3">
+          <span class="card-num">06</span>
+          <div class="card-icon">🧣</div>
+          <div class="card-meta">Winter Season 2024–25 • Jasoh, Khudiyana & Badaran</div>
+          <div class="card-title">Distribution of Blankets to Underprivileged Families</div>
+          <div class="card-desc">Blankets distributed to 26 underprivileged families in Nadaun Block to provide immediate winter relief and comfort during severe seasonal conditions.</div>
+          <div class="card-shloka">उष्णता दानं, करुणाया रूपम्।</div>
+        </div>
+      </div>
+
+      <div style="margin-top:3rem;">
+        <div class="section-header fade-in">
+          <span class="section-label">2024 — Field Documentation</span>
+          <h2>From the <strong>Field</strong></h2>
+          <div class="divider center"></div>
+        </div>
+        <div class="photo-grid">
+          <figure class="photo-card fade-in">
+            <img src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.33_PM.jpeg" alt="Blanket relief distribution at a community gathering">
+            <figcaption>Blanket relief packs arranged for winter support, ready for distribution to families in need.</figcaption>
+          </figure>
+          <figure class="photo-card fade-in">
+            <img src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.36_PM.jpeg" alt="Beneficiary receiving a blanket during relief distribution">
+            <figcaption>Warm blanket assistance handed directly to a beneficiary, reflecting the Trust’s hands-on relief approach.</figcaption>
+          </figure>
+          <figure class="photo-card fade-in">
+            <img src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.39_PM.jpeg" alt="Community seminar with a full audience">
+            <figcaption>Community awareness seminar held indoors, with a full audience listening to the programme proceedings.</figcaption>
+          </figure>
+          <figure class="photo-card fade-in">
+            <img src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.24_PM.jpeg" alt="Flood relief coverage in the press">
+            <figcaption>Press coverage documenting flood relief and the Trust’s response to disaster-affected families.</figcaption>
+          </figure>
+          <figure class="photo-card fade-in">
+            <img src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.22_PM_(1).jpeg" alt="Tree plantation volunteers with saplings">
+            <figcaption>Volunteers participating in tree plantation and sapling care as part of the environmental drive.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <section class="banner">
   <div class="container">
     <h2>Real Work, Real Communities</h2>
+    <p>Each programme is documented through field photographs and written records to keep the work transparent and grounded in seva.</p>
+    <div style="margin-top:1.5rem;">
+      <a href="gallery.html" class="btn-primary">View Full Gallery →</a>
+    </div>
   </div>
 </section>
 
-<section class="section">
+<div class="contact-shell" style="padding:3rem 0 2rem;">
   <div class="container">
-    <div class="section-header fade-in">
-      <span class="section-label">Activity Documentation</span>
-      <h2>From the <strong>Field</strong></h2>
-      <div class="divider center"></div>
+    <div class="footer-columns">
+      <div class="footer-panel">
+        <h4>Contact</h4>
+        <p><strong>Address:</strong> Himachal Pradesh, India</p>
+        <p><strong>Email:</strong> info@trsmnyas.org</p>
+      </div>
+      <div class="footer-panel">
+        <h4>Quick Links</h4>
+        <p><a href="about.html">About</a> &nbsp;|&nbsp; <a href="media.html">Media</a> &nbsp;|&nbsp; <a href="gallery.html">Gallery</a></p>
+        <p><a href="join.html">Join Us</a> &nbsp;|&nbsp; <a href="contact.html">Contact</a> &nbsp;|&nbsp; <a href="donate.html">Donate</a></p>
+      </div>
+      <div class="footer-panel">
+        <h4>Motto</h4>
+        <p style="font-family:var(--ff-devan); color:var(--rose);font-size:1.1rem;">सेवा परमो धर्मः</p>
+        <p>Service is the highest dharma.</p>
+      </div>
     </div>
-    <div class="gallery-grid">
-      <img class="fade-in" src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.17_PM.jpeg" alt="Activity photo"><img class="fade-in" src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.19_PM.jpeg" alt="Activity photo"><img class="fade-in" src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.22_PM_(1).jpeg" alt="Activity photo"><img class="fade-in" src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.22_PM.jpeg" alt="Activity photo"><img class="fade-in" src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.24_PM.jpeg" alt="Activity photo"><img class="fade-in" src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.32_PM_(1).jpeg" alt="Activity photo"><img class="fade-in" src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.32_PM.jpeg" alt="Activity photo"><img class="fade-in" src="assets/images/WhatsApp_Image_2026-05-06_at_3.06.33_PM.jpeg" alt="Activity photo">
+    <div class="footer-bottom">
+      <div class="footer-logo-text"><strong>Thakur Ram Singh Smriti Nyas</strong> • Himachal Pradesh</div>
+      <div class="footer-copy">© 2025 Thakur Ram Singh Smriti Nyas. All rights reserved.</div>
+      <div class="footer-shloka">सेवा परमो धर्मः</div>
     </div>
   </div>
-</section>
 </div>
 
 <script src="assets/js/main.js"></script>
+<script>
+function showYear(id, btn) {
+  document.querySelectorAll('.year-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.year-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</div><!-- .page -->
+
+<script src="assets/js/main.js"></script>
+<script>
+function showYear(id, btn) {
+  document.querySelectorAll('.year-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.year-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
 </body>
 </html>

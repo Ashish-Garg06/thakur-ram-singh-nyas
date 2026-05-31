@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donate | Thakur Ram Singh Smriti Nyas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- No floating donate button on the donate page itself -->
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-emblem">
+        <img src="assets/images/trust-logo.png"
+            alt="Thakur Ram Singh Smriti Nyas Emblem">
+      </div>
+
+      <div class="nav-logo-text">
+        <span>Thakur Ram Singh Smriti Nyas</span>
+        <span>Himachal Pradesh • Charitable Trust</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="activities.html">Activities</a></li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="join.html">Join Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="donate.html" class="nav-donate-btn">Donate</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="toggleMenu()">Home</a>
+  <a href="about.html" onclick="toggleMenu()">About</a>
+  <a href="activities.html" onclick="toggleMenu()">Activities</a>
+  <a href="media.html" onclick="toggleMenu()">Media</a>
+  <a href="gallery.html" onclick="toggleMenu()">Gallery</a>
+  <a href="join.html" onclick="toggleMenu()">Join Us</a>
+  <a href="contact.html" onclick="toggleMenu()">Contact</a>
+</div>
+
+<div class="page">
+
+<!-- ── HERO ── -->
+<section class="donation-hero">
+  <div class="container" style="text-align:center;">
+    <div class="hero-tag" style="display:inline-flex;margin-bottom:1.5rem;">🪷 Support the Mission</div>
+    <h1 class="hero-title" style="text-align:center;">
+      Your Donation<br>
+      <strong>Becomes</strong> <em>Seva</em>
+    </h1>
+    <p style="font-family:var(--ff-devan);font-size:1.1rem;color:var(--rose);margin:1rem 0;">दानं परमो धर्मः — Giving is the highest virtue.</p>
+    <p style="max-width:580px;margin:0 auto;color:var(--ink-mid);font-size:1.05rem;line-height:1.9;">
+      Every contribution to the Trust — large or small — directly enables education, healthcare, relief work, environmental action, and youth empowerment in Himachal Pradesh.
+    </p>
+  </div>
+</section>
+
+<!-- ── CAUSE SELECTION + FORM ── -->
+<section class="section" style="padding:4rem 0;">
+  <div class="container">
+    <div class="donation-form-wrap fade-in">
+
+      <div class="section-header" style="margin-bottom:2rem;">
+        <span class="section-label">Choose an Amount</span>
+      </div>
+
+      <!-- Amount options -->
+      <div class="donation-options">
+        <div class="donation-option" onclick="selectAmount(this,'₹500')">
+          <div class="donation-amount">₹500</div>
+          <div class="donation-label">Supports a student's books</div>
+        </div>
+        <div class="donation-option selected" onclick="selectAmount(this,'₹1,000')">
+          <div class="donation-amount">₹1,000</div>
+          <div class="donation-label">Funds a health camp visit</div>
+        </div>
+        <div class="donation-option" onclick="selectAmount(this,'₹5,000')">
+          <div class="donation-amount">₹5,000</div>
+          <div class="donation-label">Plants 50 saplings</div>
+        </div>
+      </div>
+
+      <!-- Custom amount -->
+      <div class="form-group" style="margin-bottom:1.5rem;">
+        <label>Or enter a custom amount (₹)</label>
+        <input type="number" placeholder="e.g. 2500" min="1">
+      </div>
+
+      <!-- Donor details -->
+      <div class="form-row">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="As per PAN / ID">
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="+91 XXXXX XXXXX">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="For donation receipt">
+      </div>
+      <div class="form-group">
+        <label>Dedicate this donation to (optional)</label>
+        <input type="text" placeholder="In memory of, or in honor of...">
+      </div>
+      <div class="form-group">
+        <label>Cause / Area of Support</label>
+        <select>
+          <option value="">General Fund (Trust's discretion)</option>
+          <option>Education & Scholarships</option>
+          <option>Healthcare & Medical Camps</option>
+          <option>Environmental Conservation</option>
+          <option>Rural Livelihood</option>
+          <option>Youth Empowerment</option>
+          <option>Animal Welfare</option>
+          <option>Disaster Relief</option>
+        </select>
+      </div>
+
+      <button class="btn-submit" onclick="alert('Thank you for your generosity! The Trust team will reach out to confirm your donation details.')">Proceed to Donate 🪷</button>
+
+      <!-- UPI Option -->
+      <div class="donation-upi" style="margin-top:2rem;">
+        <div style="font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--rose);margin-bottom:1rem;">Direct UPI Transfer</div>
+        <div style="font-size:2rem;margin-bottom:0.5rem;">📱</div>
+        <div class="donation-upi-id">trsmnyas@upi</div>
+        <p style="font-size:0.85rem;color:var(--ink-lt);margin-top:0.5rem;">Scan or copy UPI ID to donate directly.<br>Please share your name and purpose via email after transferring.</p>
+        <p style="margin-top:0.75rem;font-size:0.82rem;color:var(--ink-xs);">📧 info@trsmnyas.org</p>
+      </div>
+
+      <!-- Trust note -->
+      <div style="margin-top:2rem;padding:1.25rem;background:var(--blush);border-radius:8px;text-align:center;">
+        <p style="font-size:0.85rem;color:var(--ink-lt);line-height:1.8;">
+          🔒 The Trust maintains complete transparency in financial operations.<br>
+          All donations are used exclusively for charitable activities.<br>
+          <strong style="color:var(--rose);">Tax benefit under 80G may be applicable — please contact us for details.</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHAT YOUR DONATION DOES ── -->
+<section class="section" style="background:var(--blush);padding:4rem 0;">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Impact</span>
+      <h2>What Your <strong>Donation Enables</strong></h2>
+      <div class="divider center"></div>
+    </div>
+    <div class="home-teaser-grid">
+      <div class="home-teaser fade-in">
+        <div class="home-teaser-icon">📚</div>
+        <h3>Education</h3>
+        <p>Books, stationery, scholarships, and mentoring for students in rural areas of Himachal Pradesh.</p>
+      </div>
+      <div class="home-teaser fade-in fade-in-delay-1">
+        <div class="home-teaser-icon">🏥</div>
+        <h3>Healthcare</h3>
+        <p>Free medical camps, medicines, and health awareness sessions for communities in need.</p>
+      </div>
+      <div class="home-teaser fade-in fade-in-delay-2">
+        <div class="home-teaser-icon">🌿</div>
+        <h3>Environment</h3>
+        <p>Plantation drives, conservation programs, and environmental awareness campaigns.</p>
+      </div>
+      <div class="home-teaser fade-in">
+        <div class="home-teaser-icon">🤝</div>
+        <h3>Relief Work</h3>
+        <p>Direct aid to families affected by calamities — food, essentials, and community coordination.</p>
+      </div>
+      <div class="home-teaser fade-in fade-in-delay-1">
+        <div class="home-teaser-icon">🇮🇳</div>
+        <h3>Youth Empowerment</h3>
+        <p>Training, camps, and development programs building disciplined and service-oriented youth.</p>
+      </div>
+      <div class="home-teaser fade-in fade-in-delay-2">
+        <div class="home-teaser-icon">🐄</div>
+        <h3>Animal Welfare</h3>
+        <p>Support for gaushala and care of indigenous cattle — part of the Trust's holistic vision.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="banner">
+  <div class="container">
+    <h2>दानं परमो धर्मः</h2>
+    <p>Your generosity is a sacred act. The Trust is grateful for every hand that extends in support.</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<div class="contact-shell" style="padding:3rem 0 2rem;">
+  <div class="container">
+    <div class="footer-columns">
+      <div class="footer-panel">
+        <h4>Contact</h4>
+        <p><strong>Address:</strong> Himachal Pradesh, India</p>
+        <p><strong>Email:</strong> info@trsmnyas.org</p>
+      </div>
+      <div class="footer-panel">
+        <h4>Quick Links</h4>
+        <p><a href="about.html">About</a> &nbsp;|&nbsp; <a href="activities.html">Activities</a> &nbsp;|&nbsp; <a href="join.html">Join Us</a></p>
+        <p><a href="media.html">Media</a> &nbsp;|&nbsp; <a href="gallery.html">Gallery</a> &nbsp;|&nbsp; <a href="contact.html">Contact</a></p>
+      </div>
+      <div class="footer-panel">
+        <h4>Motto</h4>
+        <p style="font-family:var(--ff-devan); color:var(--rose);font-size:1.1rem;">सेवा परमो धर्मः</p>
+        <p>Service is the highest dharma.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-logo-text"><strong>Thakur Ram Singh Smriti Nyas</strong> • Himachal Pradesh</div>
+      <div class="footer-copy">© 2025 Thakur Ram Singh Smriti Nyas. All rights reserved.</div>
+      <div class="footer-shloka">सेवा परमो धर्मः</div>
+    </div>
+  </div>
+</div>
+
+</div><!-- .page -->
+<script src="assets/js/main.js"></script>
+<script>
+function selectAmount(el, amt) {
+  document.querySelectorAll('.donation-option').forEach(d => d.classList.remove('selected'));
+  el.classList.add('selected');
+}
+</script>
+</body>
+</html>

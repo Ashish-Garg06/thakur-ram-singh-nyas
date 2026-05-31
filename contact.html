@@ -10,11 +10,16 @@
 </head>
 <body>
 
+<a href="donate.html" class="donate-float"><span class="df-icon">🪷</span> Donate Now</a>
 
 <nav id="navbar">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <div class="nav-logo-emblem">🪔</div>
+      <div class="nav-logo-emblem">
+        <img src="assets/images/trust-logo.png"
+            alt="Thakur Ram Singh Smriti Nyas Emblem">
+      </div>
+
       <div class="nav-logo-text">
         <span>Thakur Ram Singh Smriti Nyas</span>
         <span>Himachal Pradesh • Charitable Trust</span>
@@ -24,22 +29,24 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="activities.html">Activities</a></li>
-      <li><a href="founder.html">Founder</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
       <li><a href="media.html">Media</a></li>
-      <li><a href="contact.html" class="nav-cta">Connect</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="join.html">Join Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="donate.html" class="nav-donate-btn">Donate</a></li>
     </ul>
-    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></span></div>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html" onclick="toggleMenu()">Home</a>
   <a href="about.html" onclick="toggleMenu()">About</a>
   <a href="activities.html" onclick="toggleMenu()">Activities</a>
-  <a href="founder.html" onclick="toggleMenu()">Founder</a>
-  <a href="gallery.html" onclick="toggleMenu()">Gallery</a>
   <a href="media.html" onclick="toggleMenu()">Media</a>
-  <a href="contact.html" onclick="toggleMenu()">Connect</a>
+  <a href="gallery.html" onclick="toggleMenu()">Gallery</a>
+  <a href="join.html" onclick="toggleMenu()">Join Us</a>
+  <a href="contact.html" onclick="toggleMenu()">Contact</a>
+  <a href="donate.html" onclick="toggleMenu()" style="color:var(--rose);font-weight:700;">Donate →</a>
 </div>
 
 <div class="page">
@@ -47,7 +54,7 @@
   <div class="container">
     <div class="contact-grid">
       <div class="contact-left fade-in">
-        <span class="section-label" style="color:var(--gold);">Get in Touch</span>
+        <span class="section-label">Get in Touch</span>
         <h2>Connect With <em>the Trust</em></h2>
         <div class="divider"></div>
         <p>Whether you wish to support our initiatives, collaborate on a program, or simply learn more about our work — we welcome every conversation rooted in the spirit of seva.</p>
@@ -55,7 +62,10 @@
           <div class="info-row"><span class="info-icon">📍</span><span>Himachal Pradesh, India</span></div>
           <div class="info-row"><span class="info-icon">✉️</span><span>info@trsmnyas.org</span></div>
           <div class="info-row"><span class="info-icon">📞</span><span>Contact via official channels</span></div>
-          <div class="info-row"><span class="info-icon">🪔</span><span style="font-family:var(--ff-devan);color:var(--gold);font-size:1.05rem;">सेवा परमो धर्मः</span></div>
+          <div class="info-row"><span class="info-icon">🪔</span><span style="font-family:var(--ff-devan);color:var(--rose);font-size:1.05rem;">सेवा परमो धर्मः</span></div>
+        </div>
+        <div style="margin-top:2rem;">
+          <a href="donate.html" class="btn-primary">🪷 Donate to the Trust</a>
         </div>
       </div>
       <div class="contact-form fade-in fade-in-delay-1">
@@ -81,6 +91,8 @@
             <option>Social Welfare</option>
             <option>Youth Empowerment</option>
             <option>Donation / Support</option>
+            <option>Volunteering</option>
+            <option>Partnership</option>
           </select>
         </div>
         <div class="form-group">
@@ -90,30 +102,30 @@
         <button class="btn-submit">Send Message →</button>
       </div>
     </div>
-    
-<div class="footer-columns">
-  <div class="footer-panel">
-    <h4>Contact Details</h4>
-    <p><strong>Address:</strong> Himachal Pradesh, India</p>
-    <p><strong>Email:</strong> info@trsmnyas.org</p>
-    <p><strong>Phone:</strong> Contact via official channels</p>
-  </div>
-  <div class="footer-panel">
-    <h4>Support & Collaboration</h4>
-    <p>For volunteering, donations, partnerships, and local initiative support, please connect through the official trust contact channels.</p>
-  </div>
-  <div class="footer-panel">
-    <h4>Motto</h4>
-    <p style="font-family:var(--ff-devan); color:var(--gold-lt);">सेवा परमो धर्मः</p>
-    <p>Service is the highest dharma.</p>
-  </div>
-</div>
-<div class="footer-bottom">
-  <div class="footer-logo-text"><strong>Thakur Ram Singh Smriti Nyas</strong> • Himachal Pradesh</div>
-  <div class="footer-copy">© 2025 • Heritage editorial design with real trust imagery</div>
-  <div class="footer-shloka">सेवा परमो धर्मः</div>
-</div>
 
+    <div class="footer-columns">
+      <div class="footer-panel">
+        <h4>Contact Details</h4>
+        <p><strong>Address:</strong> Himachal Pradesh, India</p>
+        <p><strong>Email:</strong> info@trsmnyas.org</p>
+        <p><strong>Phone:</strong> Contact via official channels</p>
+      </div>
+      <div class="footer-panel">
+        <h4>Support & Collaboration</h4>
+        <p>For volunteering, donations, partnerships, and local initiative support, please connect through the official trust contact channels.</p>
+        <p style="margin-top:0.75rem;"><a href="join.html" style="color:var(--rose);">Join the Trust →</a></p>
+      </div>
+      <div class="footer-panel">
+        <h4>Motto</h4>
+        <p style="font-family:var(--ff-devan); color:var(--rose);font-size:1.1rem;">सेवा परमो धर्मः</p>
+        <p>Service is the highest dharma.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-logo-text"><strong>Thakur Ram Singh Smriti Nyas</strong> • Himachal Pradesh</div>
+      <div class="footer-copy">© 2025 Thakur Ram Singh Smriti Nyas. All rights reserved.</div>
+      <div class="footer-shloka">सेवा परमो धर्मः</div>
+    </div>
   </div>
 </section>
 </div>
